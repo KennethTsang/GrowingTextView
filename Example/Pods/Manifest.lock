@@ -1,0 +1,14 @@
+PODS:
+  - GrowingTextView (0.1.0)
+
+DEPENDENCIES:
+  - GrowingTextView (from `../`)
+
+EXTERNAL SOURCES:
+  GrowingTextView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GrowingTextView: 6d5e92864b60b5873272631a43436bb4f9359e5c
+
+COCOAPODS: 0.38.2
