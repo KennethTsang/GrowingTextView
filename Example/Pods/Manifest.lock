@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  GrowingTextView: 6d5e92864b60b5873272631a43436bb4f9359e5c
+  GrowingTextView: 4f4c4f8b03f0664f42329cfabc175fd4186cc0b5
 
 COCOAPODS: 0.38.2
