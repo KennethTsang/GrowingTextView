@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'GrowingTextView_Example', :exclusive => true do
+  pod 'GrowingTextView', :path => '../'
+end
+
+target 'GrowingTextView_Tests', :exclusive => true do
+  pod 'GrowingTextView', :path => '../'
+
+  
+end
