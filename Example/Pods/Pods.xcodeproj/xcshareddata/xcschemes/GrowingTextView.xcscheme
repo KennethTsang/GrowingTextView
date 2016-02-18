@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3FF830C1509B685E6B34926"
+               BlueprintIdentifier = "76AA9B168001345048831FD0"
                BuildableName = "GrowingTextView.framework"
                BlueprintName = "GrowingTextView"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -52,8 +52,10 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods-GrowingTextView_Tests/Cartography.framework'
   install_framework 'Pods-GrowingTextView_Tests/GrowingTextView.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods-GrowingTextView_Tests/Cartography.framework'
   install_framework 'Pods-GrowingTextView_Tests/GrowingTextView.framework'
 fi
