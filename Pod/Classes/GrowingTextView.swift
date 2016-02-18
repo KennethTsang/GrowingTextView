@@ -2,8 +2,8 @@
 //  GrowingTextView.swift
 //  Pods
 //
-//  Created by Kenneth on 17/2/2016.
-//
+//  Created by BigSmallDog on 17/2/2016.
+//  Copyright (c) 2016 BigSmallDog. All rights reserved.
 //
 
 import Foundation
@@ -20,6 +20,9 @@ import UIKit
     
     // Trim white space and newline characters when end editing. Default is true
     public var trimWhiteSpaceWhenEndEditing = true
+    
+    // Maximm height of the textview
+    public var maxHeight = CGFloat(0)
     
     // Placeholder properties
     // Need to set both placeHolder and placeHolderColor in order to show placeHolder in the textview
@@ -57,24 +60,30 @@ import UIKit
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
+    // Calculate height of textview
     override public func layoutSubviews() {
         super.layoutSubviews()
         let size = sizeThatFits(CGSizeMake(bounds.size.width, CGFloat.max))
-        
+        var height = size.height
+        if maxHeight > 0 {
+            height = min(size.height, maxHeight)
+        }
+    
         if (heightConstraint == nil) {
-            heightConstraint = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: size.height)
+            heightConstraint = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height)
             addConstraint(heightConstraint!)
         }
         
-        if size.height != heightConstraint?.constant {
-            self.heightConstraint!.constant = size.height;
+        if height != heightConstraint?.constant {
+            self.heightConstraint!.constant = height;
             scrollRangeToVisible(NSMakeRange(0, 0))
             if let delegate = delegate as? GrowingTextViewDelegate {
-                delegate.textViewDidChangeHeight?(size.height)
+                delegate.textViewDidChangeHeight?(height)
             }
         }
     }
     
+    // Show placeholder
     override public func drawRect(rect: CGRect) {
         super.drawRect(rect)
         if text.isEmpty {
@@ -88,15 +97,19 @@ import UIKit
                 frame.size.width - textContainerInset.left - textContainerInset.right,
                 frame.size.height)
             
-            let attributes = [
-                NSFontAttributeName: font!,
+            var attributes = [
                 NSForegroundColorAttributeName: placeHolderColor,
                 NSParagraphStyleAttributeName: paragraphStyle
             ]
+            if let font = font {
+                attributes[NSFontAttributeName] = font
+            }
+            
             placeHolder.drawInRect(rect, withAttributes: attributes)
         }
     }
     
+    // Trim white space and new line characters when end editing.
     func textDidEndEditing(notification: NSNotification) {
         if notification.object === self {
             if trimWhiteSpaceWhenEndEditing {
@@ -105,7 +118,8 @@ import UIKit
             }
         }
     }
-    
+
+    // Limit the length of text
     func textDidChange(notification: NSNotification) {
         if notification.object === self {
             if maxLength > 0 && text.characters.count > maxLength {

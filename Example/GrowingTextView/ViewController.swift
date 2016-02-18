@@ -14,26 +14,26 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var inputToolbar: UIToolbar!
-    
-    lazy private var textView: GrowingTextView = {
-        let _textView = GrowingTextView()
-        _textView.delegate = self
-        _textView.font = UIFont.systemFontOfSize(15)
-        _textView.returnKeyType = .Send
-        _textView.maxLength = 100
-        _textView.trimWhiteSpaceWhenEndEditing = true
-        _textView.placeHolder = "Say something..."
-        _textView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
-        _textView.layer.cornerRadius = 4.0
-        return _textView
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let textView = GrowingTextView()
+        textView.delegate = self
+        textView.layer.cornerRadius = 4.0
+        textView.maxLength = 200
+        textView.maxHeight = 70
+        textView.trimWhiteSpaceWhenEndEditing = true
+        textView.placeHolder = "Say something..."
+        textView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
+        textView.placeHolderLeftMargin = 5.0
+        textView.font = UIFont.systemFontOfSize(15)
+        
         inputToolbar.addSubview(textView)
         constrain(inputToolbar, textView) { inputToolbar, textView in
             textView.edges == inset(inputToolbar.edges, 8, 8, 8, 8)
         }
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillChangeFrame:", name: UIKeyboardWillChangeFrameNotification, object: nil)
         let tapGesture = UITapGestureRecognizer(target: self, action: "tapGestureHandler")
         view.addGestureRecognizer(tapGesture)
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     }
     
     func tapGestureHandler() {
-        textView.resignFirstResponder()
+        inputToolbar.endEditing(true)
     }
 }
 
