@@ -21,7 +21,7 @@ This cocoapods provide a subclass of UITextView which support auto growing, plac
                        DESC
 
   s.homepage         = "https://github.com/BigSmallDog/GrowingTextView"
-  s.screenshots      = "https://github.com/BigSmallDog/GrowingTextView/blob/master/DEMO.gif"
+  s.screenshots      = "https://raw.githubusercontent.com/BigSmallDog/GrowingTextView/master/DEMO.gif"
   s.license          = 'MIT'
   s.author           = { "BigSmallDog" => "doglittlebig@gmail.com" }
   s.source           = { :git => "https://github.com/BigSmallDog/GrowingTextView.git", :tag => s.version.to_s }
