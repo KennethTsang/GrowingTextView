@@ -8,7 +8,7 @@
 
 ## Requirements
 
-iOS 7.0 or above
+iOS 8.0 or above
 
 ## Usage
 
