@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  GrowingTextView
 //
-//  Created by BigSmallDog on 02/17/2016.
-//  Copyright (c) 2016 BigSmallDog. All rights reserved.
+//  Created by Kenneth Tsang on 02/17/2016.
+//  Copyright (c) 2016 Kenneth Tsang. All rights reserved.
 //
 
 import UIKit

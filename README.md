@@ -30,7 +30,7 @@ addSubview(textView)
 Parameter | Type | Description | Default
 --- | --- | --- | ---
 *maxLength* | Int | Maximum text length. Exceeded text will be trimmed. 0 means no limit. | *0*
-*trimWhiteSpaceWhenEndEditing* | Bool | Maximum text length. Exceeded text will be trimmed. 0 means no limit. | *true*
+*trimWhiteSpaceWhenEndEditing* | Bool | Trim white space and new line characters when textview did end editing. | *true*
 *placeHolder* | String? | PlaceHolder text. | *nil*
 *placeHolderColor* | UIColor? | PlaceHolder text color. | *nil*
 *placeHolderLeftMargin* | CGFloat | Left margin of PlaceHolder text. | *5.0*
@@ -91,7 +91,7 @@ You may just copy GrowingTextView.swift into your project. That's it!
 
 ## Author
 
-BigSmallDog, doglittlebig@gmail.com
+Kenneth Tsang, kenneth.tsang@me.com
 
 ## License
 
