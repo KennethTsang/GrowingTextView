@@ -3,22 +3,28 @@
 [![Version](https://img.shields.io/cocoapods/v/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![License](https://img.shields.io/cocoapods/l/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Platform](https://img.shields.io/cocoapods/p/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
+[![Language](https://img.shields.io/badge/Language-Swift-orange.svg?style=flat)](http://cocoapods.org/pods/AddressBookKit)
 
-![ScreenShot](DEMO.gif)
+<img src="DEMO.gif" border=1 style="border-color:#eeeeee">
 
 ## Requirements
 
 iOS 8.0 or above
 
-## Usage
+## Installation
 
-First import the GrowingTextView framework
+GrowingTextView is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-```swift
-import GrowingTextView
+```ruby
+pod "GrowingTextView"
 ```
 
-Create an instance of GrowingTextView
+or
+
+Copy `GrowingTextView.swift` into your project.
+
+## Usage
 
 ```swift
 let textView = GrowingTextView()
@@ -75,19 +81,6 @@ func textViewDidChangeHeight(height: CGFloat) {
    }
 }
 ```
-
-## Installation with CocoaPods
-
-GrowingTextView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "GrowingTextView"
-```
-
-## Installation Manually
-
-You may just copy GrowingTextView.swift into your project. That's it!
 
 ## Author
 
