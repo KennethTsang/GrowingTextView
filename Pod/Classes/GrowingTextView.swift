@@ -39,7 +39,7 @@ import UIKit
     private weak var heightConstraint: NSLayoutConstraint?
 
     // Initialize
-    override init(frame: CGRect, textContainer: NSTextContainer?) {
+    override public init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         commonInit()
     }
