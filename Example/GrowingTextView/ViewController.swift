@@ -34,8 +34,8 @@ class ViewController: UIViewController {
             textView.edges == inset(inputToolbar.edges, 8, 8, 8, 8)
         }
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillChangeFrame:", name: UIKeyboardWillChangeFrameNotification, object: nil)
-        let tapGesture = UITapGestureRecognizer(target: self, action: "tapGestureHandler")
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.keyboardWillChangeFrame(_:)), name: UIKeyboardWillChangeFrameNotification, object: nil)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapGestureHandler))
         view.addGestureRecognizer(tapGesture)
     }
     
