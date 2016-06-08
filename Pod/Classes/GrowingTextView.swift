@@ -16,28 +16,28 @@ import UIKit
 @objc public class GrowingTextView: UITextView {
     
     // Maximum length of text. 0 means no limit.
-    public var maxLength = 0
+    @IBInspectable public var maxLength: Int = 0
     
     // Trim white space and newline characters when end editing. Default is true
-    public var trimWhiteSpaceWhenEndEditing = true
+    @IBInspectable public var trimWhiteSpaceWhenEndEditing: Bool = true
     
     // Maximm height of the textview
-    public var maxHeight = CGFloat(0)
+    @IBInspectable public var maxHeight: CGFloat = CGFloat(0)
     
     // Placeholder properties
     // Need to set both placeHolder and placeHolderColor in order to show placeHolder in the textview
-    public var placeHolder: NSString? {
+    @IBInspectable public var placeHolder: NSString? {
         didSet { setNeedsDisplay() }
     }
-    public var placeHolderColor: UIColor? {
+    @IBInspectable public var placeHolderColor: UIColor? {
         didSet { setNeedsDisplay() }
     }
-    public var placeHolderLeftMargin: CGFloat = 5 {
+    @IBInspectable public var placeHolderLeftMargin: CGFloat = 5 {
         didSet { setNeedsDisplay() }
     }
-
+    
     private weak var heightConstraint: NSLayoutConstraint?
-
+    
     // Initialize
     override public init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
@@ -51,13 +51,29 @@ import UIKit
     
     // Listen to UITextView notification to handle trimming, placeholder and maximum length
     private func commonInit() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textDidChange:", name: UITextViewTextDidChangeNotification, object: self)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textDidEndEditing:", name: UITextViewTextDidEndEditingNotification, object: self)
+        associateConstraints()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(UITextInputDelegate.textDidChange(_:)), name: UITextViewTextDidChangeNotification, object: self)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GrowingTextView.textDidEndEditing(_:)), name: UITextViewTextDidEndEditingNotification, object: self)
     }
     
     // Remove notification observer when deinit
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func associateConstraints() {
+        // iterate through all text view's constraints and identify
+        // height,from: https://github.com/legranddamien/MBAutoGrowingTextView
+        for constraint in self.constraints {
+            if (constraint.firstAttribute == .Height) {
+                
+                if (constraint.relation == .Equal) {
+                    self.heightConstraint = constraint;
+                }
+                
+            }
+        }
+        
     }
     
     // Calculate height of textview
@@ -68,8 +84,9 @@ import UIKit
         if maxHeight > 0 {
             height = min(size.height, maxHeight)
         }
-    
+        
         if (heightConstraint == nil) {
+            
             heightConstraint = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height)
             addConstraint(heightConstraint!)
         }
@@ -93,9 +110,9 @@ import UIKit
             paragraphStyle.alignment = textAlignment
             
             let rect = CGRectMake(textContainerInset.left + placeHolderLeftMargin,
-                textContainerInset.top,
-                frame.size.width - textContainerInset.left - textContainerInset.right,
-                frame.size.height)
+                                  textContainerInset.top,
+                                  frame.size.width - textContainerInset.left - textContainerInset.right,
+                                  frame.size.height)
             
             var attributes = [
                 NSForegroundColorAttributeName: placeHolderColor,
@@ -118,7 +135,7 @@ import UIKit
             }
         }
     }
-
+    
     // Limit the length of text
     func textDidChange(notification: NSNotification) {
         if notification.object === self {
