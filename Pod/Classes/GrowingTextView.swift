@@ -51,6 +51,9 @@ import UIKit
     
     // Listen to UITextView notification to handle trimming, placeholder and maximum length
     private func commonInit() {
+    
+        self.contentMode = .Redraw
+    
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textDidChange:", name: UITextViewTextDidChangeNotification, object: self)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "textDidEndEditing:", name: UITextViewTextDidEndEditingNotification, object: self)
     }
