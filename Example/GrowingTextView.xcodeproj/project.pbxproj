@@ -166,12 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "GrowingTextView_Example" */;
 			buildPhases = (
-				ED59FF2782107FC691D220C3 /* Check Pods Manifest.lock */,
+				ED59FF2782107FC691D220C3 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				2F9B7DBCCFD9FA3A608F5778 /* Embed Pods Frameworks */,
-				D2747CFAE24668C4A4A7A5CD /* Copy Pods Resources */,
+				2F9B7DBCCFD9FA3A608F5778 /* [CP] Embed Pods Frameworks */,
+				D2747CFAE24668C4A4A7A5CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,12 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "GrowingTextView_Tests" */;
 			buildPhases = (
-				8E5AD08CEE7346DC917D10CA /* Check Pods Manifest.lock */,
+				8E5AD08CEE7346DC917D10CA /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				AAE727B9796F5522D9F2D1A3 /* Embed Pods Frameworks */,
-				D8E87E0916248D165CAEACDC /* Copy Pods Resources */,
+				AAE727B9796F5522D9F2D1A3 /* [CP] Embed Pods Frameworks */,
+				D8E87E0916248D165CAEACDC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,14 +262,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F9B7DBCCFD9FA3A608F5778 /* Embed Pods Frameworks */ = {
+		2F9B7DBCCFD9FA3A608F5778 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,14 +277,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrowingTextView_Example/Pods-GrowingTextView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E5AD08CEE7346DC917D10CA /* Check Pods Manifest.lock */ = {
+		8E5AD08CEE7346DC917D10CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,14 +292,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		AAE727B9796F5522D9F2D1A3 /* Embed Pods Frameworks */ = {
+		AAE727B9796F5522D9F2D1A3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,14 +307,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrowingTextView_Tests/Pods-GrowingTextView_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2747CFAE24668C4A4A7A5CD /* Copy Pods Resources */ = {
+		D2747CFAE24668C4A4A7A5CD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,14 +322,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrowingTextView_Example/Pods-GrowingTextView_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D8E87E0916248D165CAEACDC /* Copy Pods Resources */ = {
+		D8E87E0916248D165CAEACDC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,14 +337,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrowingTextView_Tests/Pods-GrowingTextView_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ED59FF2782107FC691D220C3 /* Check Pods Manifest.lock */ = {
+		ED59FF2782107FC691D220C3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

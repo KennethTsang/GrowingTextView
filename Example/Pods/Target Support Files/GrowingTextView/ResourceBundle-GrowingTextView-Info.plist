@@ -13,11 +13,11 @@
   <key>CFBundlePackageType</key>
   <string>BNDL</string>
   <key>CFBundleShortVersionString</key>
-  <string>0.1.4</string>
+  <string>0.1.7</string>
   <key>CFBundleSignature</key>
   <string>????</string>
   <key>CFBundleVersion</key>
-  <string>${CURRENT_PROJECT_VERSION}</string>
+  <string>1</string>
   <key>NSPrincipalClass</key>
   <string></string>
 </dict>

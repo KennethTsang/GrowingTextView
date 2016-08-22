@@ -1,6 +1,6 @@
 {
   "name": "GrowingTextView",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "summary": "UITextView with support of auto growing, placeholder and length limit.",
   "description": "This cocoapods provide a subclass of UITextView which support auto growing, placeholder and length limit.",
   "homepage": "https://github.com/KennethTsang/GrowingTextView",
@@ -11,7 +11,7 @@
   },
   "source": {
     "git": "https://github.com/KennethTsang/GrowingTextView.git",
-    "tag": "0.1.4"
+    "tag": "0.1.7"
   },
   "platforms": {
     "ios": "8.0"
