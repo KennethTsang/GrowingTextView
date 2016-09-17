@@ -13,14 +13,22 @@ iOS 8.0 or above
 
 ## Installation
 
+#### CocoaPods
+
 GrowingTextView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
+Swift 3<br>
 ```ruby
 pod "GrowingTextView"
 ```
 
-or
+Swift 2.3<br>
+```ruby
+pod 'GrowingTextView', :git => 'https://github.com/KennethTsang/GrowingTextView.git', :branch => 'swift2'
+```
+
+#### Manually
 
 Copy `GrowingTextView.swift` into your project.
 
@@ -65,8 +73,8 @@ class ViewController: UIViewController, GrowingTextViewDelegate {
 Implement textViewDidChangeHeight. Call layoutIfNeeded() inside an animation. 
 
 ```swift
-func textViewDidChangeHeight(height: CGFloat) {
-   UIView.animateWithDuration(0.2) { () -> Void in
+func textViewDidChangeHeight(_ height: CGFloat) {
+   UIView.animate(withDuration: 0.2) {
        self.textView.layoutIfNeeded()
    }
 }
@@ -75,8 +83,8 @@ func textViewDidChangeHeight(height: CGFloat) {
 In some cases, you may also need to animate it's superview, e.g. toolbar.
 
 ```swift
-func textViewDidChangeHeight(height: CGFloat) {
-   UIView.animateWithDuration(0.2) { () -> Void in
+func textViewDidChangeHeight(_ height: CGFloat) {
+   UIView.animate(withDuration: 0.2) {
        self.myToolbar.layoutIfNeeded()
    }
 }
