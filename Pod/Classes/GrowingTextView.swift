@@ -10,33 +10,33 @@ import Foundation
 import UIKit
 
 @objc public protocol GrowingTextViewDelegate: UITextViewDelegate {
-    @objc optional func textViewDidChangeHeight(height: CGFloat)
+    @objc optional func textViewDidChangeHeight(_ height: CGFloat)
 }
 
-@objc public class GrowingTextView: UITextView {
+@objc open class GrowingTextView: UITextView {
     
     // Maximum length of text. 0 means no limit.
-    public var maxLength = 0
+    open var maxLength = 0
     
     // Trim white space and newline characters when end editing. Default is true
-    public var trimWhiteSpaceWhenEndEditing = true
+    open var trimWhiteSpaceWhenEndEditing = true
     
     // Maximm height of the textview
-    public var maxHeight = CGFloat(0)
+    open var maxHeight = CGFloat(0)
     
     // Placeholder properties
     // Need to set both placeHolder and placeHolderColor in order to show placeHolder in the textview
-    public var placeHolder: NSString? {
+    open var placeHolder: NSString? {
         didSet { setNeedsDisplay() }
     }
-    public var placeHolderColor: UIColor? {
+    open var placeHolderColor: UIColor? {
         didSet { setNeedsDisplay() }
     }
-    public var placeHolderLeftMargin: CGFloat = 5 {
+    open var placeHolderLeftMargin: CGFloat = 5 {
         didSet { setNeedsDisplay() }
     }
     
-    private weak var heightConstraint: NSLayoutConstraint?
+    fileprivate weak var heightConstraint: NSLayoutConstraint?
     
     // Initialize
     override public init(frame: CGRect, textContainer: NSTextContainer?) {
@@ -50,7 +50,7 @@ import UIKit
     }
     
     // Listen to UITextView notification to handle trimming, placeholder and maximum length
-    private func commonInit() {
+    fileprivate func commonInit() {
         
         self.contentMode = .redraw
         
@@ -64,7 +64,7 @@ import UIKit
     }
     
     // Calculate height of textview
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         let size = sizeThatFits(CGSize(width:bounds.size.width, height: CGFloat.greatestFiniteMagnitude))
         var height = size.height
@@ -81,13 +81,13 @@ import UIKit
             self.heightConstraint!.constant = height;
             scrollRangeToVisible(NSMakeRange(0, 0))
             if let delegate = delegate as? GrowingTextViewDelegate {
-                delegate.textViewDidChangeHeight?(height: height)
+                delegate.textViewDidChangeHeight?(height)
             }
         }
     }
     
     // Show placeholder
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         if text.isEmpty {
             guard let placeHolder = placeHolder else { return }

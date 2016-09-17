@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Cartography
 import GrowingTextView
 
 class ViewController: UIViewController {
@@ -27,25 +26,36 @@ class ViewController: UIViewController {
         textView.placeHolder = "Say something..."
         textView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
         textView.placeHolderLeftMargin = 5.0
-        textView.font = UIFont.systemFontOfSize(15)
+        textView.font = UIFont.systemFont(ofSize: 15)
         
         inputToolbar.addSubview(textView)
-        constrain(inputToolbar, textView) { inputToolbar, textView in
-            textView.edges == inset(inputToolbar.edges, 8, 8, 8, 8)
-        }
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIKeyboardWillChangeFrameNotification, object: nil)
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        inputToolbar.translatesAutoresizingMaskIntoConstraints = false
+        
+        let views = ["textView": textView]
+        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[textView]-8-|", options: [], metrics: nil, views: views)
+        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[textView]-8-|", options: [], metrics: nil, views: views)
+        inputToolbar.addConstraints(hConstraints)
+        inputToolbar.addConstraints(vConstraints)
+        self.view.layoutIfNeeded()
+
+//        constrain(inputToolbar, textView) { inputToolbar, textView in
+//            textView.edges == inset(inputToolbar.edges, 8, 8, 8, 8)
+//        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         view.addGestureRecognizer(tapGesture)
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
-    func keyboardWillChangeFrame(notification: NSNotification) {
-        let endFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        bottomConstraint.constant = CGRectGetHeight(view.bounds) - endFrame.origin.y
+    func keyboardWillChangeFrame(_ notification: Notification) {
+        let endFrame = ((notification as NSNotification).userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        bottomConstraint.constant = view.bounds.height - endFrame.origin.y
         self.view.layoutIfNeeded()
     }
     
@@ -55,8 +65,8 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: GrowingTextViewDelegate {
-    func textViewDidChangeHeight(height: CGFloat) {
-        UIView.animateWithDuration(0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.CurveLinear], animations: { () -> Void in
+    func textViewDidChangeHeight(_ height: CGFloat) {
+        UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveLinear], animations: { () -> Void in
             self.inputToolbar.layoutIfNeeded()
         }, completion: nil)
     }

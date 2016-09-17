@@ -1,9 +1,7 @@
 PODS:
-  - Cartography (0.6.0)
   - GrowingTextView (0.1.7)
 
 DEPENDENCIES:
-  - Cartography
   - GrowingTextView (from `../`)
 
 EXTERNAL SOURCES:
@@ -11,9 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
-  GrowingTextView: 596efe6874199c0117ada1c73dd4bc23eee92849
+  GrowingTextView: c4c7477a4ab5b31b313219e4b2c61c20ba33321d
 
-PODFILE CHECKSUM: 8b0e844a82a937a2cbe9cf2622977659a174968a
+PODFILE CHECKSUM: f34f0f1fc34ca2e2faf6887857a2bda50ed3e60d
 
 COCOAPODS: 1.0.1
