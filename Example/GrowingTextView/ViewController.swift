@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Cartography
 import GrowingTextView
 
 class ViewController: UIViewController {
@@ -29,10 +28,18 @@ class ViewController: UIViewController {
         textView.placeHolderLeftMargin = 5.0
         textView.font = UIFont.systemFontOfSize(15)
         
+        inputToolbar.translatesAutoresizingMaskIntoConstraints = false
+        textView.translatesAutoresizingMaskIntoConstraints = false
+
         inputToolbar.addSubview(textView)
-        constrain(inputToolbar, textView) { inputToolbar, textView in
-            textView.edges == inset(inputToolbar.edges, 8, 8, 8, 8)
-        }
+        let views = ["textView": textView]
+        let hConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-8-[textView]-8-|", options: [], metrics: nil, views: views)
+        let vConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-8-[textView]-8-|", options: [], metrics: nil, views: views)
+        inputToolbar.addConstraints(hConstraints)
+        inputToolbar.addConstraints(vConstraints)
+//        constrain(inputToolbar, textView) { inputToolbar, textView in
+//            textView.edges == inset(inputToolbar.edges, 8, 8, 8, 8)
+//        }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIKeyboardWillChangeFrameNotification, object: nil)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))

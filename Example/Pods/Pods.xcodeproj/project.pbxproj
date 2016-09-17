@@ -7,250 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05F26504FF9642740895C6C19BAB2B4B /* Pods-GrowingTextView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2B54406881A6CDE04C8CF015A883A /* Pods-GrowingTextView_Tests-dummy.m */; };
-		067B999F39C5934CEBCD1CF68995C9A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23CE2FEC011657B28137E0ED3CA721 /* Dimension.swift */; };
-		0BF7074164ED968F1EF4D70D7D11AE00 /* GrowingTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 585565A117B567BC514BCB67CC27F471 /* GrowingTextView-dummy.m */; };
-		2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AA558EE7C7ED2BD31B58A56438592C /* Edge.swift */; };
-		28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC46FFC7DDB178E3BD611737EBF2104 /* Compound.swift */; };
-		369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB7A46AB1BCE18F00B683998086AFF /* Distribute.swift */; };
-		452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67DFC18B64ED49E17196327486063C /* Context.swift */; };
-		48ADE3FB3F30FCA5893083351449DA98 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84731979502C1051DDD3380C8CBE6F8 /* ViewUtils.swift */; };
-		5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56625CDC747644FAC737192449343A55 /* Edges.swift */; };
-		584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14849D2549F22D671E242FAECD1331B0 /* Align.swift */; };
-		6348B178A3B357029571C0461DB7BA21 /* Pods-GrowingTextView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C08399B314BEF0F1473D8D58E355B9 /* Pods-GrowingTextView_Example-dummy.m */; };
-		7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A6A53ACE9667E8AA3861744F5C9B69 /* Expression.swift */; };
-		8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE289F6470E1ACA814547C4E22A9CA /* LayoutProxy.swift */; };
-		8D5B9597F25CA1C54B7F1ED87DF74C5A /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B828A7A26B0210E5157E0AAAD2715EC /* GrowingTextView.swift */; };
-		A01383B51D281977316B65B18D0A80FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		A33E78335A9459EC83327D52001569C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		B23E3B878363F72D1E874E46EB62FA7F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F265A7562D847007FDDD677420FD545F /* Size.swift */; };
-		B33961ABC955558CD9D93BA40AB6FD34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		B90891688A088BC37455234028C2E993 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA622414D4C125BCAAF5DD8699111EE /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DFC7AE19B16C500579948C2ED6C7E1 /* Extensions.swift */; };
-		C285680F89E791DF1E1A7764E8C77715 /* GrowingTextView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C7CB7615FF70ECB2DC2A57D1FA09597 /* GrowingTextView.bundle */; };
-		C3649839064E53A4BF767D2EF29651EF /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CE44DCB4946E77677C96B1BE3177AF /* Priority.swift */; };
-		D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ECDFC04192522C42484F2F250E1157 /* Constrain.swift */; };
-		D3C01862D88692FA2E85A2D84345982B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898767B1647572EF440D093A2FAE4DB /* Point.swift */; };
-		D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AF7B4AEA4CCB0E88BC528CE09ACD9F /* Cartography-dummy.m */; };
-		E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858E2F5191313A661107D67F60852728 /* ConstraintGroup.swift */; };
-		E4DE32392BCEEEC9AA3168DA73AB7F30 /* Pods-GrowingTextView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7EB20413D4AF9CDD6F0FCAAF44D411 /* Pods-GrowingTextView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB9E85B0CE6A53DCBDE040A716B5DBF8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8454B02CDEC1EDED887D3D5608542F /* Property.swift */; };
-		EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C41DC75EA13D7B27EC0501E697376A /* Coefficients.swift */; };
-		F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373222A8C261810FACCB20F9088BB09F /* Constraint.swift */; };
-		F95ADCA0B85C6C0640372D3EFBBF1AD6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38576033E15D19183F502B47A58D1FA /* View.swift */; };
-		F9B0C075388A1EF8D570D34711C05F37 /* GrowingTextView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4F02171E308137D69E760C1B383069 /* GrowingTextView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDFC99B2D628FADEBB75D562EA8C5BB3 /* Pods-GrowingTextView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0937B07CD9913F192238AA966280CF43 /* Pods-GrowingTextView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		139F0EFBF31B8FB9A889DAB6E47B7755 /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8D318369E215C8CBDC9F0B7F3B919 /* GrowingTextView.swift */; };
+		192451B7AE354865F41AD4BB5C3C4A8C /* Pods-GrowingTextView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0937B07CD9913F192238AA966280CF43 /* Pods-GrowingTextView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2041ED91135EA47F86D5884833BEAFAF /* GrowingTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17C0FA7CE8BA204D3C41E71A397304 /* GrowingTextView-dummy.m */; };
+		36F02A1589714FCA1E834BA0CFDC10A3 /* Pods-GrowingTextView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D2B54406881A6CDE04C8CF015A883A /* Pods-GrowingTextView_Tests-dummy.m */; };
+		5628733A21610905CBB29941800CCBC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		951EFCD9EC021B43E4B8CC6E087C4DF8 /* Pods-GrowingTextView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7EB20413D4AF9CDD6F0FCAAF44D411 /* Pods-GrowingTextView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		965AD054BFE27042F8BEFBA75C715F96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		9A78D144C49E16F7B9E942D991838142 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		CF531B2B2501B39068D8001BDED5B3A9 /* GrowingTextView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A23A95B489BDBFB60C33DA82FD10644 /* GrowingTextView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBA12E2E45724DB01B6FA8D0CCCD5DB9 /* Pods-GrowingTextView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C08399B314BEF0F1473D8D58E355B9 /* Pods-GrowingTextView_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07B26A9BA5EAD1DABE201A77E0E09040 /* PBXContainerItemProxy */ = {
+		087A3CF316614F79514ECFA8D6AC9AD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 63FB3FBF765C1F3013D3F2C22A8D231E;
+			remoteGlobalIDString = C985E23F7AB71D5F7A81CD6FCE03D15A;
 			remoteInfo = GrowingTextView;
 		};
-		2172DD52E2E3DFF432B5D03FCC0CA7BE /* PBXContainerItemProxy */ = {
+		4146DA148A6AE80DE827CB7B525AEC09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 62CB4A53E53AA477BFD9B082EF16EF5F;
-			remoteInfo = "GrowingTextView-GrowingTextView";
-		};
-		4DE5BA67777787895726A55C004E8F31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3A04698AAE4D6124C20602D622956E5;
-			remoteInfo = Cartography;
-		};
-		5E0443D15CE3DEECC6CD1BA7128F374E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 63FB3FBF765C1F3013D3F2C22A8D231E;
+			remoteGlobalIDString = C985E23F7AB71D5F7A81CD6FCE03D15A;
 			remoteInfo = GrowingTextView;
-		};
-		FE7BDD957C2B8CF29A9F23B6BFB1401B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3A04698AAE4D6124C20602D622956E5;
-			remoteInfo = Cartography;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0937B07CD9913F192238AA966280CF43 /* Pods-GrowingTextView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GrowingTextView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		116A0096DEE7587B0B9203174A4C54DA /* Pods-GrowingTextView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GrowingTextView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		14849D2549F22D671E242FAECD1331B0 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
-		1485134A61C583E6DB3DFC6449391760 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		153E655ADE56277DB7EED5B087EBB7DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15DFC7AE19B16C500579948C2ED6C7E1 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
-		15E58307A6D90F0F3877A1223B7EA834 /* GrowingTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GrowingTextView.xcconfig; sourceTree = "<group>"; };
 		16232753E9ED65C737B71A4FBF76F0B4 /* Pods-GrowingTextView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GrowingTextView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		1BC46FFC7DDB178E3BD611737EBF2104 /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
-		1CF4E75818C0BF5B8550569F460B8A64 /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cartography.modulemap; sourceTree = "<group>"; };
-		1D4F02171E308137D69E760C1B383069 /* GrowingTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GrowingTextView-umbrella.h"; sourceTree = "<group>"; };
-		2219E72042B91E569B6F85060890910B /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
-		26A6A53ACE9667E8AA3861744F5C9B69 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
-		2C67DFC18B64ED49E17196327486063C /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
 		2C7EB20413D4AF9CDD6F0FCAAF44D411 /* Pods-GrowingTextView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GrowingTextView_Example-umbrella.h"; sourceTree = "<group>"; };
 		2E987A86EE56C3D21C5C86149FA5E1F0 /* Pods-GrowingTextView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GrowingTextView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		373222A8C261810FACCB20F9088BB09F /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
-		3CEF2A5D7AD810361EB83D1DB1259927 /* Pods_GrowingTextView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowingTextView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41B7A959B9C0E83755180D6BD85AF225 /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
+		3789544738452D5BEC0A289C7F178FE0 /* GrowingTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GrowingTextView.modulemap; sourceTree = "<group>"; };
+		3D17C0FA7CE8BA204D3C41E71A397304 /* GrowingTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GrowingTextView-dummy.m"; sourceTree = "<group>"; };
 		42FDC9BF44D793CC98A8D01FBFDBD3D3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47B21482D941436ADC86FA8C052CCA29 /* GrowingTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GrowingTextView.xcconfig; sourceTree = "<group>"; };
 		485356643AEE59AA0CB8CBAB7F0805DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48AF7B4AEA4CCB0E88BC528CE09ACD9F /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
+		4FA8D318369E215C8CBDC9F0B7F3B919 /* GrowingTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GrowingTextView.swift; sourceTree = "<group>"; };
 		51C08399B314BEF0F1473D8D58E355B9 /* Pods-GrowingTextView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GrowingTextView_Example-dummy.m"; sourceTree = "<group>"; };
-		56625CDC747644FAC737192449343A55 /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
 		567DEF117628C89F81EE7A3F89980712 /* Pods-GrowingTextView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GrowingTextView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		56CE44DCB4946E77677C96B1BE3177AF /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
-		585565A117B567BC514BCB67CC27F471 /* GrowingTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GrowingTextView-dummy.m"; sourceTree = "<group>"; };
-		5898767B1647572EF440D093A2FAE4DB /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
-		58ECDFC04192522C42484F2F250E1157 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
-		5B828A7A26B0210E5157E0AAAD2715EC /* GrowingTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GrowingTextView.swift; sourceTree = "<group>"; };
 		5BBE4A0583B65F4893C63F484CC3EB45 /* Pods-GrowingTextView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GrowingTextView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		5BC6B1DE4299A12158A54C9F2FD5CC33 /* GrowingTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GrowingTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C7CB7615FF70ECB2DC2A57D1FA09597 /* GrowingTextView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrowingTextView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E23CE2FEC011657B28137E0ED3CA721 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
-		7948AB79DD75CC5F1673C5049C66623E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73355670421A71C92CD1145BF783FAE2 /* GrowingTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GrowingTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A23A95B489BDBFB60C33DA82FD10644 /* GrowingTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GrowingTextView-umbrella.h"; sourceTree = "<group>"; };
 		8069305D84B955D85F75D9E242CEFD65 /* Pods-GrowingTextView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GrowingTextView_Tests.modulemap"; sourceTree = "<group>"; };
-		858E2F5191313A661107D67F60852728 /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
-		8870950A03D7DB3F810B280CE5BB6886 /* Pods_GrowingTextView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowingTextView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8936D0D75B644C213108A114C8CDCFA0 /* ResourceBundle-GrowingTextView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GrowingTextView-Info.plist"; sourceTree = "<group>"; };
-		89C41DC75EA13D7B27EC0501E697376A /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
 		8A5E5BA64A5A2A6CE420B91345BCBD29 /* Pods-GrowingTextView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GrowingTextView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8A8454B02CDEC1EDED887D3D5608542F /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
+		8D2506B93941797226487175CE7131C7 /* Pods_GrowingTextView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowingTextView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B3EF16D5303C68C6EC19D0BBE1B7960F /* Pods-GrowingTextView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GrowingTextView_Tests-resources.sh"; sourceTree = "<group>"; };
-		B84731979502C1051DDD3380C8CBE6F8 /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
 		B89553F26101397546D36FF2BA4DC0B3 /* Pods-GrowingTextView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GrowingTextView_Example.modulemap"; sourceTree = "<group>"; };
-		C26093DE56D3C69B660CA5EA461E0812 /* GrowingTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GrowingTextView.modulemap; sourceTree = "<group>"; };
 		CC826FD9B986A8A800046CDCB6B62E40 /* Pods-GrowingTextView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GrowingTextView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CEBB7A46AB1BCE18F00B683998086AFF /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D1A94A5C318914E0A22392CB542A89AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7D2B54406881A6CDE04C8CF015A883A /* Pods-GrowingTextView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GrowingTextView_Tests-dummy.m"; sourceTree = "<group>"; };
 		E26BEAD43D9D6D9F8C787C15F8B0DA9F /* Pods-GrowingTextView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GrowingTextView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E36B93F521104A22A121387AED8D9919 /* Pods-GrowingTextView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GrowingTextView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E38576033E15D19183F502B47A58D1FA /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
 		E7EAEBD31D024713D57D42E318EFA1B9 /* Pods-GrowingTextView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GrowingTextView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F265A7562D847007FDDD677420FD545F /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
-		F9AA558EE7C7ED2BD31B58A56438592C /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
-		FBEE179643CCFF0A00100DC9A0DDF014 /* GrowingTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GrowingTextView-prefix.pch"; sourceTree = "<group>"; };
-		FCA622414D4C125BCAAF5DD8699111EE /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
+		ED6E063BAAA715452A24D0EB7758C067 /* Pods_GrowingTextView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrowingTextView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8406B80BFA2505557F6AF266D0D888 /* GrowingTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GrowingTextView-prefix.pch"; sourceTree = "<group>"; };
 		FEF238D5F9C85CF7CCF4199270DE9ECE /* Pods-GrowingTextView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GrowingTextView_Example-resources.sh"; sourceTree = "<group>"; };
-		FEFE289F6470E1ACA814547C4E22A9CA /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D3C3B581960B43C859DFDD18D647F7A /* Frameworks */ = {
+		307C9207CDC621AE5DCDF91B2E001607 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B33961ABC955558CD9D93BA40AB6FD34 /* Foundation.framework in Frameworks */,
+				9A78D144C49E16F7B9E942D991838142 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		429A34DF3BBD7321C9C7D6FBF5F1E3FB /* Frameworks */ = {
+		7F7BE1397D2DCB63B58E65F359782F62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A33E78335A9459EC83327D52001569C9 /* Foundation.framework in Frameworks */,
+				5628733A21610905CBB29941800CCBC5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		742A4826D03DBFD3C0E58D0A37263E31 /* Frameworks */ = {
+		C62FEB311D3AFD0933F48E3BFA7E3DEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4A5DC8649602F86AB5B4D543111662A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				067B999F39C5934CEBCD1CF68995C9A3 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EEAB2499AFC9A1052E4E7F44113525DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A01383B51D281977316B65B18D0A80FA /* Foundation.framework in Frameworks */,
+				965AD054BFE27042F8BEFBA75C715F96 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B63AF98BD1DFCC11C9E744AD72386E1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1485134A61C583E6DB3DFC6449391760 /* Cartography.framework */,
-				5C7CB7615FF70ECB2DC2A57D1FA09597 /* GrowingTextView.bundle */,
-				5BC6B1DE4299A12158A54C9F2FD5CC33 /* GrowingTextView.framework */,
-				8870950A03D7DB3F810B280CE5BB6886 /* Pods_GrowingTextView_Example.framework */,
-				3CEF2A5D7AD810361EB83D1DB1259927 /* Pods_GrowingTextView_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		0D86929E7F0A0E4D8F51D05841994060 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C26093DE56D3C69B660CA5EA461E0812 /* GrowingTextView.modulemap */,
-				15E58307A6D90F0F3877A1223B7EA834 /* GrowingTextView.xcconfig */,
-				585565A117B567BC514BCB67CC27F471 /* GrowingTextView-dummy.m */,
-				FBEE179643CCFF0A00100DC9A0DDF014 /* GrowingTextView-prefix.pch */,
-				1D4F02171E308137D69E760C1B383069 /* GrowingTextView-umbrella.h */,
-				153E655ADE56277DB7EED5B087EBB7DD /* Info.plist */,
-				8936D0D75B644C213108A114C8CDCFA0 /* ResourceBundle-GrowingTextView-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GrowingTextView";
-			sourceTree = "<group>";
-		};
-		11B3FD516C171271FE00AF4686AF206A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1CF4E75818C0BF5B8550569F460B8A64 /* Cartography.modulemap */,
-				41B7A959B9C0E83755180D6BD85AF225 /* Cartography.xcconfig */,
-				48AF7B4AEA4CCB0E88BC528CE09ACD9F /* Cartography-dummy.m */,
-				2219E72042B91E569B6F85060890910B /* Cartography-prefix.pch */,
-				FCA622414D4C125BCAAF5DD8699111EE /* Cartography-umbrella.h */,
-				7948AB79DD75CC5F1673C5049C66623E /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Cartography";
-			sourceTree = "<group>";
-		};
 		240F54CC9AFBE547981439EE99782842 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C6B2F9C5794BA9081A261F26D1742B2 /* GrowingTextView */,
+				C93B6706810B16621108ED8FE3463308 /* GrowingTextView */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		24DFABE9E0A0EA0EC576361EAE2903B3 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				37AD5E497661D38BAB23D2366497067D /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		37AD5E497661D38BAB23D2366497067D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				5B828A7A26B0210E5157E0AAAD2715EC /* GrowingTextView.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -261,14 +115,22 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4C6B2F9C5794BA9081A261F26D1742B2 /* GrowingTextView */ = {
+		4144E8BAC3D8248154B4E7047B53C3AF /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				24DFABE9E0A0EA0EC576361EAE2903B3 /* Pod */,
-				0D86929E7F0A0E4D8F51D05841994060 /* Support Files */,
+				932D373CBA5615AEBAB0FC89D82E0472 /* Classes */,
 			);
-			name = GrowingTextView;
-			path = ../..;
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		79CDC3553AEEA45BF22FEB29C0EF969F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73355670421A71C92CD1145BF783FAE2 /* GrowingTextView.framework */,
+				ED6E063BAAA715452A24D0EB7758C067 /* Pods_GrowingTextView_Example.framework */,
+				8D2506B93941797226487175CE7131C7 /* Pods_GrowingTextView_Tests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -277,8 +139,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				240F54CC9AFBE547981439EE99782842 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				F62FECA7DA223FAFD017635E2EE8D5AF /* Pods */,
-				0B63AF98BD1DFCC11C9E744AD72386E1 /* Products */,
+				79CDC3553AEEA45BF22FEB29C0EF969F /* Products */,
 				E5EA1C4AF2D5732E4740B5EF37EA4ACA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -301,6 +162,14 @@
 			path = "Target Support Files/Pods-GrowingTextView_Tests";
 			sourceTree = "<group>";
 		};
+		932D373CBA5615AEBAB0FC89D82E0472 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4FA8D318369E215C8CBDC9F0B7F3B919 /* GrowingTextView.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,32 +178,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C34E61DCCE3BB841E3E83DB6F21423B3 /* Cartography */ = {
+		C93B6706810B16621108ED8FE3463308 /* GrowingTextView */ = {
 			isa = PBXGroup;
 			children = (
-				14849D2549F22D671E242FAECD1331B0 /* Align.swift */,
-				89C41DC75EA13D7B27EC0501E697376A /* Coefficients.swift */,
-				1BC46FFC7DDB178E3BD611737EBF2104 /* Compound.swift */,
-				58ECDFC04192522C42484F2F250E1157 /* Constrain.swift */,
-				373222A8C261810FACCB20F9088BB09F /* Constraint.swift */,
-				858E2F5191313A661107D67F60852728 /* ConstraintGroup.swift */,
-				2C67DFC18B64ED49E17196327486063C /* Context.swift */,
-				6E23CE2FEC011657B28137E0ED3CA721 /* Dimension.swift */,
-				CEBB7A46AB1BCE18F00B683998086AFF /* Distribute.swift */,
-				F9AA558EE7C7ED2BD31B58A56438592C /* Edge.swift */,
-				56625CDC747644FAC737192449343A55 /* Edges.swift */,
-				26A6A53ACE9667E8AA3861744F5C9B69 /* Expression.swift */,
-				15DFC7AE19B16C500579948C2ED6C7E1 /* Extensions.swift */,
-				FEFE289F6470E1ACA814547C4E22A9CA /* LayoutProxy.swift */,
-				5898767B1647572EF440D093A2FAE4DB /* Point.swift */,
-				56CE44DCB4946E77677C96B1BE3177AF /* Priority.swift */,
-				8A8454B02CDEC1EDED887D3D5608542F /* Property.swift */,
-				F265A7562D847007FDDD677420FD545F /* Size.swift */,
-				E38576033E15D19183F502B47A58D1FA /* View.swift */,
-				B84731979502C1051DDD3380C8CBE6F8 /* ViewUtils.swift */,
-				11B3FD516C171271FE00AF4686AF206A /* Support Files */,
+				4144E8BAC3D8248154B4E7047B53C3AF /* Pod */,
+				E1FA28353C9550760F0F996FD3BFC726 /* Support Files */,
 			);
-			path = Cartography;
+			name = GrowingTextView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E1FA28353C9550760F0F996FD3BFC726 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3789544738452D5BEC0A289C7F178FE0 /* GrowingTextView.modulemap */,
+				47B21482D941436ADC86FA8C052CCA29 /* GrowingTextView.xcconfig */,
+				3D17C0FA7CE8BA204D3C41E71A397304 /* GrowingTextView-dummy.m */,
+				EE8406B80BFA2505557F6AF266D0D888 /* GrowingTextView-prefix.pch */,
+				7A23A95B489BDBFB60C33DA82FD10644 /* GrowingTextView-umbrella.h */,
+				D1A94A5C318914E0A22392CB542A89AC /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GrowingTextView";
 			sourceTree = "<group>";
 		};
 		E5EA1C4AF2D5732E4740B5EF37EA4ACA /* Targets Support Files */ = {
@@ -364,141 +229,87 @@
 			path = "Target Support Files/Pods-GrowingTextView_Example";
 			sourceTree = "<group>";
 		};
-		F62FECA7DA223FAFD017635E2EE8D5AF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C34E61DCCE3BB841E3E83DB6F21423B3 /* Cartography */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4E0867DBC894AAD6A6482F56F7C4C796 /* Headers */ = {
+		B10629E799FE1D92A0B5617AF2B73050 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9B0C075388A1EF8D570D34711C05F37 /* GrowingTextView-umbrella.h in Headers */,
+				CF531B2B2501B39068D8001BDED5B3A9 /* GrowingTextView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		514705BF944036B79FA99816C564643C /* Headers */ = {
+		DAA5C7C328E56C9D5B17A90E46CC956E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90891688A088BC37455234028C2E993 /* Cartography-umbrella.h in Headers */,
+				192451B7AE354865F41AD4BB5C3C4A8C /* Pods-GrowingTextView_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1B0582673C3F62B22A4ED7B766090AA /* Headers */ = {
+		EB5083BD33062BB290DCA4E22999BDF2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4DE32392BCEEEC9AA3168DA73AB7F30 /* Pods-GrowingTextView_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB1445AC3ED567E2076829D3AEE6BBC2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDFC99B2D628FADEBB75D562EA8C5BB3 /* Pods-GrowingTextView_Tests-umbrella.h in Headers */,
+				951EFCD9EC021B43E4B8CC6E087C4DF8 /* Pods-GrowingTextView_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4699DF139EE4F7DF30146CFF7F2522BD /* Pods-GrowingTextView_Example */ = {
+		1337470D3533D5288D3734A53202D210 /* Pods-GrowingTextView_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8564FDBB33734DFD5184A2D948D2CF0C /* Build configuration list for PBXNativeTarget "Pods-GrowingTextView_Example" */;
+			buildConfigurationList = DDC88498217E4FD95D649D583447FBF9 /* Build configuration list for PBXNativeTarget "Pods-GrowingTextView_Tests" */;
 			buildPhases = (
-				5DB90AD16D5D90589C95FE366F18345A /* Sources */,
-				E4A5DC8649602F86AB5B4D543111662A /* Frameworks */,
-				E1B0582673C3F62B22A4ED7B766090AA /* Headers */,
+				90B8E7E08394708EA52C275A3939B5F5 /* Sources */,
+				7F7BE1397D2DCB63B58E65F359782F62 /* Frameworks */,
+				DAA5C7C328E56C9D5B17A90E46CC956E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				58F6BD37E418229CBDD93C7C67140475 /* PBXTargetDependency */,
-				142F8DF0E5A4F85BCCF335446FDFEE3A /* PBXTargetDependency */,
-			);
-			name = "Pods-GrowingTextView_Example";
-			productName = "Pods-GrowingTextView_Example";
-			productReference = 8870950A03D7DB3F810B280CE5BB6886 /* Pods_GrowingTextView_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		62CB4A53E53AA477BFD9B082EF16EF5F /* GrowingTextView-GrowingTextView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 426737CFF11E3B5F4A55BF0614264C55 /* Build configuration list for PBXNativeTarget "GrowingTextView-GrowingTextView" */;
-			buildPhases = (
-				6AA360C5EF3C3B46195128B0DAD90A52 /* Sources */,
-				742A4826D03DBFD3C0E58D0A37263E31 /* Frameworks */,
-				1244BF181B74195560F46E2D61EA3501 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "GrowingTextView-GrowingTextView";
-			productName = "GrowingTextView-GrowingTextView";
-			productReference = 5C7CB7615FF70ECB2DC2A57D1FA09597 /* GrowingTextView.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		63FB3FBF765C1F3013D3F2C22A8D231E /* GrowingTextView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 679ADA38AE22BCFCA5BFBF412FB70CA9 /* Build configuration list for PBXNativeTarget "GrowingTextView" */;
-			buildPhases = (
-				29D11199E8C3C471181A067AB86213DD /* Sources */,
-				EEAB2499AFC9A1052E4E7F44113525DD /* Frameworks */,
-				8E01C6381D7B268A1E6609A6F2A2965B /* Resources */,
-				4E0867DBC894AAD6A6482F56F7C4C796 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1FA07B058AA03084B72E7DD2CA129605 /* PBXTargetDependency */,
-			);
-			name = GrowingTextView;
-			productName = GrowingTextView;
-			productReference = 5BC6B1DE4299A12158A54C9F2FD5CC33 /* GrowingTextView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C3A04698AAE4D6124C20602D622956E5 /* Cartography */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B22DC939D187391042315573DBEE7623 /* Build configuration list for PBXNativeTarget "Cartography" */;
-			buildPhases = (
-				B962ED42E882856B9D168260BB18AE95 /* Sources */,
-				429A34DF3BBD7321C9C7D6FBF5F1E3FB /* Frameworks */,
-				514705BF944036B79FA99816C564643C /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Cartography;
-			productName = Cartography;
-			productReference = 1485134A61C583E6DB3DFC6449391760 /* Cartography.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F357D4A13A1706671876A1387CB0DE90 /* Pods-GrowingTextView_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E7EE0AE8A1FB46E062D7D27A61075085 /* Build configuration list for PBXNativeTarget "Pods-GrowingTextView_Tests" */;
-			buildPhases = (
-				46D3E27236697574ABE87D2BAD21FC83 /* Sources */,
-				1D3C3B581960B43C859DFDD18D647F7A /* Frameworks */,
-				EB1445AC3ED567E2076829D3AEE6BBC2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				62B42177CAD13FC16C30337971949CDF /* PBXTargetDependency */,
-				C29FAE63FFD42E952D29A6422EA7732F /* PBXTargetDependency */,
+				F60DEA90A81DC8646475CFB381ECEC80 /* PBXTargetDependency */,
 			);
 			name = "Pods-GrowingTextView_Tests";
 			productName = "Pods-GrowingTextView_Tests";
-			productReference = 3CEF2A5D7AD810361EB83D1DB1259927 /* Pods_GrowingTextView_Tests.framework */;
+			productReference = 8D2506B93941797226487175CE7131C7 /* Pods_GrowingTextView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F2D5A87671912191FCDF73CF0C45028 /* Pods-GrowingTextView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 623351B506F7AE1A26A61088E29AF8FC /* Build configuration list for PBXNativeTarget "Pods-GrowingTextView_Example" */;
+			buildPhases = (
+				2DADE3E3EDFDA5AAC0F250372D937453 /* Sources */,
+				C62FEB311D3AFD0933F48E3BFA7E3DEF /* Frameworks */,
+				EB5083BD33062BB290DCA4E22999BDF2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F64585178FDDF66ADB966DED263D356 /* PBXTargetDependency */,
+			);
+			name = "Pods-GrowingTextView_Example";
+			productName = "Pods-GrowingTextView_Example";
+			productReference = ED6E063BAAA715452A24D0EB7758C067 /* Pods_GrowingTextView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C985E23F7AB71D5F7A81CD6FCE03D15A /* GrowingTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2BDA2ABB2CF5A7ED3815FA98DDC90D3 /* Build configuration list for PBXNativeTarget "GrowingTextView" */;
+			buildPhases = (
+				FCEFDB28A36D4B5D329CC397ACE4445D /* Sources */,
+				307C9207CDC621AE5DCDF91B2E001607 /* Frameworks */,
+				B10629E799FE1D92A0B5617AF2B73050 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrowingTextView;
+			productName = GrowingTextView;
+			productReference = 73355670421A71C92CD1145BF783FAE2 /* GrowingTextView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -509,6 +320,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					C985E23F7AB71D5F7A81CD6FCE03D15A = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -518,135 +334,198 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0B63AF98BD1DFCC11C9E744AD72386E1 /* Products */;
+			productRefGroup = 79CDC3553AEEA45BF22FEB29C0EF969F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3A04698AAE4D6124C20602D622956E5 /* Cartography */,
-				63FB3FBF765C1F3013D3F2C22A8D231E /* GrowingTextView */,
-				62CB4A53E53AA477BFD9B082EF16EF5F /* GrowingTextView-GrowingTextView */,
-				4699DF139EE4F7DF30146CFF7F2522BD /* Pods-GrowingTextView_Example */,
-				F357D4A13A1706671876A1387CB0DE90 /* Pods-GrowingTextView_Tests */,
+				C985E23F7AB71D5F7A81CD6FCE03D15A /* GrowingTextView */,
+				9F2D5A87671912191FCDF73CF0C45028 /* Pods-GrowingTextView_Example */,
+				1337470D3533D5288D3734A53202D210 /* Pods-GrowingTextView_Tests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		1244BF181B74195560F46E2D61EA3501 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8E01C6381D7B268A1E6609A6F2A2965B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C285680F89E791DF1E1A7764E8C77715 /* GrowingTextView.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		29D11199E8C3C471181A067AB86213DD /* Sources */ = {
+		2DADE3E3EDFDA5AAC0F250372D937453 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BF7074164ED968F1EF4D70D7D11AE00 /* GrowingTextView-dummy.m in Sources */,
-				8D5B9597F25CA1C54B7F1ED87DF74C5A /* GrowingTextView.swift in Sources */,
+				DBA12E2E45724DB01B6FA8D0CCCD5DB9 /* Pods-GrowingTextView_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46D3E27236697574ABE87D2BAD21FC83 /* Sources */ = {
+		90B8E7E08394708EA52C275A3939B5F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F26504FF9642740895C6C19BAB2B4B /* Pods-GrowingTextView_Tests-dummy.m in Sources */,
+				36F02A1589714FCA1E834BA0CFDC10A3 /* Pods-GrowingTextView_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DB90AD16D5D90589C95FE366F18345A /* Sources */ = {
+		FCEFDB28A36D4B5D329CC397ACE4445D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6348B178A3B357029571C0461DB7BA21 /* Pods-GrowingTextView_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6AA360C5EF3C3B46195128B0DAD90A52 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B962ED42E882856B9D168260BB18AE95 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */,
-				D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */,
-				EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */,
-				28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */,
-				D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */,
-				F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */,
-				E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */,
-				452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */,
-				0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */,
-				369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */,
-				2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */,
-				5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */,
-				7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */,
-				BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */,
-				8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */,
-				D3C01862D88692FA2E85A2D84345982B /* Point.swift in Sources */,
-				C3649839064E53A4BF767D2EF29651EF /* Priority.swift in Sources */,
-				EB9E85B0CE6A53DCBDE040A716B5DBF8 /* Property.swift in Sources */,
-				B23E3B878363F72D1E874E46EB62FA7F /* Size.swift in Sources */,
-				F95ADCA0B85C6C0640372D3EFBBF1AD6 /* View.swift in Sources */,
-				48ADE3FB3F30FCA5893083351449DA98 /* ViewUtils.swift in Sources */,
+				2041ED91135EA47F86D5884833BEAFAF /* GrowingTextView-dummy.m in Sources */,
+				139F0EFBF31B8FB9A889DAB6E47B7755 /* GrowingTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		142F8DF0E5A4F85BCCF335446FDFEE3A /* PBXTargetDependency */ = {
+		8F64585178FDDF66ADB966DED263D356 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GrowingTextView;
-			target = 63FB3FBF765C1F3013D3F2C22A8D231E /* GrowingTextView */;
-			targetProxy = 5E0443D15CE3DEECC6CD1BA7128F374E /* PBXContainerItemProxy */;
+			target = C985E23F7AB71D5F7A81CD6FCE03D15A /* GrowingTextView */;
+			targetProxy = 087A3CF316614F79514ECFA8D6AC9AD4 /* PBXContainerItemProxy */;
 		};
-		1FA07B058AA03084B72E7DD2CA129605 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GrowingTextView-GrowingTextView";
-			target = 62CB4A53E53AA477BFD9B082EF16EF5F /* GrowingTextView-GrowingTextView */;
-			targetProxy = 2172DD52E2E3DFF432B5D03FCC0CA7BE /* PBXContainerItemProxy */;
-		};
-		58F6BD37E418229CBDD93C7C67140475 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Cartography;
-			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
-			targetProxy = FE7BDD957C2B8CF29A9F23B6BFB1401B /* PBXContainerItemProxy */;
-		};
-		62B42177CAD13FC16C30337971949CDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Cartography;
-			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
-			targetProxy = 4DE5BA67777787895726A55C004E8F31 /* PBXContainerItemProxy */;
-		};
-		C29FAE63FFD42E952D29A6422EA7732F /* PBXTargetDependency */ = {
+		F60DEA90A81DC8646475CFB381ECEC80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GrowingTextView;
-			target = 63FB3FBF765C1F3013D3F2C22A8D231E /* GrowingTextView */;
-			targetProxy = 07B26A9BA5EAD1DABE201A77E0E09040 /* PBXContainerItemProxy */;
+			target = C985E23F7AB71D5F7A81CD6FCE03D15A /* GrowingTextView */;
+			targetProxy = 4146DA148A6AE80DE827CB7B525AEC09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+		10BCE06CB9A8EB836DFEDF83EDBD4E91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 116A0096DEE7587B0B9203174A4C54DA /* Pods-GrowingTextView_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GrowingTextView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GrowingTextView_Example/Pods-GrowingTextView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GrowingTextView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		190BEF06F755E11D996276819734CB5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B21482D941436ADC86FA8C052CCA29 /* GrowingTextView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GrowingTextView/GrowingTextView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GrowingTextView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GrowingTextView/GrowingTextView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GrowingTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		82CF8D3B699694A1F74BD0E090564A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B21482D941436ADC86FA8C052CCA29 /* GrowingTextView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GrowingTextView/GrowingTextView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GrowingTextView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GrowingTextView/GrowingTextView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GrowingTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8788B04D700367BE743FEA4BA789B037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 567DEF117628C89F81EE7A3F89980712 /* Pods-GrowingTextView_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GrowingTextView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GrowingTextView_Tests/Pods-GrowingTextView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GrowingTextView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -664,6 +543,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -678,79 +558,20 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		1A79383A54B487E28E4C302C30B4220A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41B7A959B9C0E83755180D6BD85AF225 /* Cartography.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Cartography;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4CB7C62135B2C799B8D4F26220061630 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7EAEBD31D024713D57D42E318EFA1B9 /* Pods-GrowingTextView_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-GrowingTextView_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GrowingTextView_Example/Pods-GrowingTextView_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_GrowingTextView_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		52FBB096D94CD9BD8C1FF6E029046F33 /* Debug */ = {
+		9DDF16CBA304ABC7B8FB66B934CBE010 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E987A86EE56C3D21C5C86149FA5E1F0 /* Pods-GrowingTextView_Tests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -780,101 +601,7 @@
 			};
 			name = Debug;
 		};
-		7993016DDDD7248C44302016936FB8D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15E58307A6D90F0F3877A1223B7EA834 /* GrowingTextView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GrowingTextView/GrowingTextView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GrowingTextView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GrowingTextView/GrowingTextView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = GrowingTextView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A4474F4BF89516A6E746D29B9E73DC03 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41B7A959B9C0E83755180D6BD85AF225 /* Cartography.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Cartography;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C4F8024F585860B579072C9994018C44 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 116A0096DEE7587B0B9203174A4C54DA /* Pods-GrowingTextView_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-GrowingTextView_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GrowingTextView_Example/Pods-GrowingTextView_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_GrowingTextView_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -892,6 +619,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -911,16 +639,19 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		D58D1502BF8144CF13FCB19AABC611EF /* Release */ = {
+		C59BBCD471BB8607B1BEEE36E02BD012 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15E58307A6D90F0F3877A1223B7EA834 /* GrowingTextView.xcconfig */;
+			baseConfigurationReference = E7EAEBD31D024713D57D42E318EFA1B9 /* Pods-GrowingTextView_Example.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -929,64 +660,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GrowingTextView/GrowingTextView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GrowingTextView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GrowingTextView/GrowingTextView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = GrowingTextView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E2BD4B920163249E12684B02DA8D0CFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15E58307A6D90F0F3877A1223B7EA834 /* GrowingTextView.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GrowingTextView";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/GrowingTextView/ResourceBundle-GrowingTextView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = GrowingTextView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		EF959AB2A3C925C7F9B9725314E2FD91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 567DEF117628C89F81EE7A3F89980712 /* Pods-GrowingTextView_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-GrowingTextView_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-GrowingTextView_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GrowingTextView_Tests/Pods-GrowingTextView_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-GrowingTextView_Example/Pods-GrowingTextView_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_GrowingTextView_Tests;
+				PRODUCT_NAME = Pods_GrowingTextView_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -994,23 +679,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		F84DB2063318D11CF4DC4BEAB1892ADA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15E58307A6D90F0F3877A1223B7EA834 /* GrowingTextView.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GrowingTextView";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/GrowingTextView/ResourceBundle-GrowingTextView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = GrowingTextView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1018,53 +686,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
-				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
+				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		426737CFF11E3B5F4A55BF0614264C55 /* Build configuration list for PBXNativeTarget "GrowingTextView-GrowingTextView" */ = {
+		623351B506F7AE1A26A61088E29AF8FC /* Build configuration list for PBXNativeTarget "Pods-GrowingTextView_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F84DB2063318D11CF4DC4BEAB1892ADA /* Debug */,
-				E2BD4B920163249E12684B02DA8D0CFC /* Release */,
+				10BCE06CB9A8EB836DFEDF83EDBD4E91 /* Debug */,
+				C59BBCD471BB8607B1BEEE36E02BD012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		679ADA38AE22BCFCA5BFBF412FB70CA9 /* Build configuration list for PBXNativeTarget "GrowingTextView" */ = {
+		B2BDA2ABB2CF5A7ED3815FA98DDC90D3 /* Build configuration list for PBXNativeTarget "GrowingTextView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7993016DDDD7248C44302016936FB8D3 /* Debug */,
-				D58D1502BF8144CF13FCB19AABC611EF /* Release */,
+				190BEF06F755E11D996276819734CB5C /* Debug */,
+				82CF8D3B699694A1F74BD0E090564A92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8564FDBB33734DFD5184A2D948D2CF0C /* Build configuration list for PBXNativeTarget "Pods-GrowingTextView_Example" */ = {
+		DDC88498217E4FD95D649D583447FBF9 /* Build configuration list for PBXNativeTarget "Pods-GrowingTextView_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C4F8024F585860B579072C9994018C44 /* Debug */,
-				4CB7C62135B2C799B8D4F26220061630 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B22DC939D187391042315573DBEE7623 /* Build configuration list for PBXNativeTarget "Cartography" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A4474F4BF89516A6E746D29B9E73DC03 /* Debug */,
-				1A79383A54B487E28E4C302C30B4220A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E7EE0AE8A1FB46E062D7D27A61075085 /* Build configuration list for PBXNativeTarget "Pods-GrowingTextView_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52FBB096D94CD9BD8C1FF6E029046F33 /* Debug */,
-				EF959AB2A3C925C7F9B9725314E2FD91 /* Release */,
+				9DDF16CBA304ABC7B8FB66B934CBE010 /* Debug */,
+				8788B04D700367BE743FEA4BA789B037 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

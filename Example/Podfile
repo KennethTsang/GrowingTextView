@@ -3,11 +3,9 @@ use_frameworks!
 
 target 'GrowingTextView_Example' do
   pod 'GrowingTextView', :path => '../'
-  pod 'Cartography'
 end
 
 target 'GrowingTextView_Tests' do
   pod 'GrowingTextView', :path => '../'
-  pod 'Cartography'
   
 end
