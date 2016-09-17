@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![License](https://img.shields.io/cocoapods/l/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Platform](https://img.shields.io/cocoapods/p/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
-[![Language](https://img.shields.io/badge/Language-Swift-orange.svg?style=flat)](http://cocoapods.org/pods/AddressBookKit)
+[![Language](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 
 <img src="DEMO.gif" border=1 style="border-color:#eeeeee">
 
