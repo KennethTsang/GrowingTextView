@@ -87,7 +87,7 @@ class ViewController: UIViewController, GrowingTextViewDelegate {
 }
 ```
 
-Checkout UITextViewDelegate here: [https://developer.apple.com/reference/uikit/uitextviewdelegate](https://developer.apple.com/reference/uikit/uitextviewdelegate)
+Check out UITextViewDelegate here: [https://developer.apple.com/reference/uikit/uitextviewdelegate](https://developer.apple.com/reference/uikit/uitextviewdelegate)
 
 ## Animation
 
