@@ -62,31 +62,56 @@ textView.backgroundColor = UIColor.whiteColor()
 textView.layer.cornerRadius = 4.0
 ```
 
-## Animation
-To animate the height change, adopt GrowingTextViewDelegate protocol instead of UITextViewDelegate.
+## Delegate
+
+Adopt `GrowingTextViewDelegate` instead of UITextViewDelegate, and listen to height change.
 
 ```swift
 class ViewController: UIViewController, GrowingTextViewDelegate {
-...
+	func textViewDidChangeHeight(_ height: CGFloat) {
+		...
+	}
+}
 ```
 
-Implement textViewDidChangeHeight. Call layoutIfNeeded() inside an animation. 
+`GrowingTextViewDelegate` is inherited from UITextViewDelegate. For example:
 
 ```swift
-func textViewDidChangeHeight(_ height: CGFloat) {
-   UIView.animate(withDuration: 0.2) {
-       self.textView.layoutIfNeeded()
-   }
+class ViewController: UIViewController, GrowingTextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+    	...
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+    	...
+    }
+}
+```
+
+Checkout UITextViewDelegate here: [https://developer.apple.com/reference/uikit/uitextviewdelegate](https://developer.apple.com/reference/uikit/uitextviewdelegate)
+
+## Animation
+
+To animate the height change, adopt `GrowingTextViewDelegate` instead of UITextViewDelegate. Implement textViewDidChangeHeight. Call layoutIfNeeded() inside an animation. 
+
+```swift
+class ViewController: UIViewController, GrowingTextViewDelegate {
+	func textViewDidChangeHeight(_ height: CGFloat) {
+	   UIView.animate(withDuration: 0.2) {
+	       self.textView.layoutIfNeeded()
+	   }
+	}
 }
 ```
 
 In some cases, you may also need to animate it's superview, e.g. toolbar.
 
 ```swift
-func textViewDidChangeHeight(_ height: CGFloat) {
-   UIView.animate(withDuration: 0.2) {
-       self.myToolbar.layoutIfNeeded()
-   }
+class ViewController: UIViewController, GrowingTextViewDelegate {
+	func textViewDidChangeHeight(_ height: CGFloat) {
+	   UIView.animate(withDuration: 0.2) {
+	       self.myToolbar.layoutIfNeeded()
+	   }
+	}
 }
 ```
 
