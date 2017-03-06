@@ -36,6 +36,12 @@ import UIKit
         didSet { setNeedsDisplay() }
     }
     
+    override open var text: String! {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
     fileprivate weak var heightConstraint: NSLayoutConstraint?
     
     // Initialize
