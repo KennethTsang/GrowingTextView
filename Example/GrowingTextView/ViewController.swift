@@ -65,7 +65,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: GrowingTextViewDelegate {
-    func textViewDidChangeHeight(_ height: CGFloat) {
+    func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
         UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveLinear], animations: { () -> Void in
             self.inputToolbar.layoutIfNeeded()
         }, completion: nil)

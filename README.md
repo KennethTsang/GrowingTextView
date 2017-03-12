@@ -68,7 +68,7 @@ Adopt `GrowingTextViewDelegate` instead of UITextViewDelegate, and listen to hei
 
 ```swift
 class ViewController: UIViewController, GrowingTextViewDelegate {
-	func textViewDidChangeHeight(_ height: CGFloat) {
+	func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
 		...
 	}
 }
@@ -95,7 +95,7 @@ To animate the height change, adopt `GrowingTextViewDelegate` instead of UITextV
 
 ```swift
 class ViewController: UIViewController, GrowingTextViewDelegate {
-	func textViewDidChangeHeight(_ height: CGFloat) {
+	func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
 	   UIView.animate(withDuration: 0.2) {
 	       self.textView.layoutIfNeeded()
 	   }
@@ -107,7 +107,7 @@ In some cases, you may also need to animate it's superview, e.g. toolbar.
 
 ```swift
 class ViewController: UIViewController, GrowingTextViewDelegate {
-	func textViewDidChangeHeight(_ height: CGFloat) {
+	func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
 	   UIView.animate(withDuration: 0.2) {
 	       self.myToolbar.layoutIfNeeded()
 	   }

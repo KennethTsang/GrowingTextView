@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 @objc public protocol GrowingTextViewDelegate: UITextViewDelegate {
-    @objc optional func textViewDidChangeHeight(_ height: CGFloat)
+    @objc optional func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat)
 }
 
 @objc open class GrowingTextView: UITextView {
@@ -87,7 +87,7 @@ import UIKit
             self.heightConstraint!.constant = height;
             scrollRangeToVisible(NSMakeRange(0, 0))
             if let delegate = delegate as? GrowingTextViewDelegate {
-                delegate.textViewDidChangeHeight?(height)
+                delegate.textViewDidChangeHeight!(self, height: height)
             }
         }
     }
