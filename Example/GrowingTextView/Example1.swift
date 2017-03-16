@@ -9,14 +9,15 @@
 import UIKit
 import GrowingTextView
 
-class ViewController: UIViewController {
+class Example1: UIViewController {
 
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var inputToolbar: UIToolbar!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint! //*** Bottom Constraint of toolbar ***
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // *** Create GrowingTextView Instance ***
         let textView = GrowingTextView()
         textView.delegate = self
         textView.layer.cornerRadius = 4.0
@@ -28,8 +29,10 @@ class ViewController: UIViewController {
         textView.placeHolderLeftMargin = 5.0
         textView.font = UIFont.systemFont(ofSize: 15)
         
+        // *** Add GrowingTextView into Toolbar
         inputToolbar.addSubview(textView)
         
+        // *** Set Autolayout constraints ***
         textView.translatesAutoresizingMaskIntoConstraints = false
         inputToolbar.translatesAutoresizingMaskIntoConstraints = false
         
@@ -40,11 +43,10 @@ class ViewController: UIViewController {
         inputToolbar.addConstraints(vConstraints)
         self.view.layoutIfNeeded()
 
-//        constrain(inputToolbar, textView) { inputToolbar, textView in
-//            textView.edges == inset(inputToolbar.edges, 8, 8, 8, 8)
-//        }
-        
+        // *** Listen for keyboard show / hide ***
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        // *** Hide keyboard when tapping outside ***
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         view.addGestureRecognizer(tapGesture)
     }
@@ -60,14 +62,17 @@ class ViewController: UIViewController {
     }
     
     func tapGestureHandler() {
-        inputToolbar.endEditing(true)
+        view.endEditing(true)
     }
 }
 
-extension ViewController: GrowingTextViewDelegate {
+extension Example1: GrowingTextViewDelegate {
+    
+    // *** Call layoutIfNeeded on superview for animation when changing height ***
+    
     func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat) {
         UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveLinear], animations: { () -> Void in
-            self.inputToolbar.layoutIfNeeded()
+            self.view.layoutIfNeeded()
         }, completion: nil)
     }
 }

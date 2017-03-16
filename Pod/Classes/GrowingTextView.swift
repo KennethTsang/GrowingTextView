@@ -13,26 +13,27 @@ import UIKit
     @objc optional func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat)
 }
 
-@objc open class GrowingTextView: UITextView {
+@IBDesignable @objc
+open class GrowingTextView: UITextView {
     
     // Maximum length of text. 0 means no limit.
-    open var maxLength = 0
+    @IBInspectable open var maxLength: Int = 0
     
     // Trim white space and newline characters when end editing. Default is true
-    open var trimWhiteSpaceWhenEndEditing = true
+    @IBInspectable open var trimWhiteSpaceWhenEndEditing: Bool = true
     
     // Maximm height of the textview
-    open var maxHeight = CGFloat(0)
+    @IBInspectable open var maxHeight: CGFloat = CGFloat(0)
     
     // Placeholder properties
     // Need to set both placeHolder and placeHolderColor in order to show placeHolder in the textview
-    open var placeHolder: NSString? {
+    @IBInspectable open var placeHolder: NSString? {
         didSet { setNeedsDisplay() }
     }
-    open var placeHolderColor: UIColor? {
+    @IBInspectable open var placeHolderColor: UIColor = UIColor(white: 0.8, alpha: 1.0) {
         didSet { setNeedsDisplay() }
     }
-    open var placeHolderLeftMargin: CGFloat = 5 {
+    @IBInspectable open var placeHolderLeftMargin: CGFloat = 5 {
         didSet { setNeedsDisplay() }
     }
     
@@ -55,11 +56,26 @@ import UIKit
         commonInit()
     }
     
+    open override var intrinsicContentSize: CGSize {
+        return CGSize(width: UIViewNoIntrinsicMetric, height: 30)
+    }
+    
+    func associateConstraints() {
+        // iterate through all text view's constraints and identify
+        // height,from: https://github.com/legranddamien/MBAutoGrowingTextView
+        for constraint in self.constraints {
+            if (constraint.firstAttribute == .height) {
+                if (constraint.relation == .equal) {
+                    self.heightConstraint = constraint;
+                }
+            }
+        }
+    }
+
     // Listen to UITextView notification to handle trimming, placeholder and maximum length
     fileprivate func commonInit() {
-        
         self.contentMode = .redraw
-        
+        associateConstraints()
         NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: NSNotification.Name.UITextViewTextDidChange, object: self)
         NotificationCenter.default.addObserver(self, selector: #selector(textDidEndEditing), name: NSNotification.Name.UITextViewTextDidEndEditing, object: self)
     }
@@ -97,7 +113,6 @@ import UIKit
         super.draw(rect)
         if text.isEmpty {
             guard let placeHolder = placeHolder else { return }
-            guard let placeHolderColor = placeHolderColor else { return }
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = textAlignment
             
@@ -106,7 +121,7 @@ import UIKit
                               width:   frame.size.width - textContainerInset.left - textContainerInset.right,
                               height: frame.size.height)
             
-            var attributes = [
+            var attributes: [String: Any] = [
                 NSForegroundColorAttributeName: placeHolderColor,
                 NSParagraphStyleAttributeName: paragraphStyle
             ]
