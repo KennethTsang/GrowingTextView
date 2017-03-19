@@ -103,7 +103,7 @@ open class GrowingTextView: UITextView {
             self.heightConstraint!.constant = height;
             scrollRangeToVisible(NSMakeRange(0, 0))
             if let delegate = delegate as? GrowingTextViewDelegate {
-                delegate.textViewDidChangeHeight!(self, height: height)
+                delegate.textViewDidChangeHeight?(self, height: height)
             }
         }
     }
