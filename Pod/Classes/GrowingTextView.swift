@@ -86,13 +86,17 @@ open class GrowingTextView: UITextView {
     }
     
     // Calculate height of textview
+    private var oldText = ""
+    private var oldWidth = CGFloat(0)
     override open func layoutSubviews() {
         super.layoutSubviews()
+        
+        if text == oldText && oldWidth == bounds.width { return }
+        oldText = text
+        oldWidth = bounds.width
+        
         let size = sizeThatFits(CGSize(width:bounds.size.width, height: CGFloat.greatestFiniteMagnitude))
-        var height = size.height
-        if maxHeight > 0 {
-            height = min(size.height, maxHeight)
-        }
+        let height = maxHeight > 0 ? min(size.height, maxHeight) : size.height
         
         if (heightConstraint == nil) {
             heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: height)
