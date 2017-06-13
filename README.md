@@ -70,6 +70,7 @@ override func viewDidLoad() {
 | *placeHolder*                  | String? | PlaceHolder text.                        | *nil*                           |
 | *placeHolderColor*             | UIColor | PlaceHolder text color.                  | UIColor(white: 0.8, alpha: 1.0) |
 | *placeHolderLeftMargin*        | CGFloat | Left margin of PlaceHolder text.         | *5.0*                           |
+| *minHeight*                    | CGFloat | Minimum height of textview.              | *0.0*                           |
 | *maxHeight*                    | CGFloat | Maximum height of textview.              | *0.0*                           |
 
 #### Examples
@@ -79,6 +80,7 @@ textView.maxLength = 140
 textView.trimWhiteSpaceWhenEndEditing = false
 textView.placeHolder = "Say something..."
 textView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
+textView.minHeight = 25.0
 textView.maxHeight = 70.0
 textView.backgroundColor = UIColor.whiteColor()
 textView.layer.cornerRadius = 4.0
