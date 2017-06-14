@@ -36,6 +36,9 @@ open class GrowingTextView: UITextView {
     @IBInspectable open var placeHolderColor: UIColor = UIColor(white: 0.8, alpha: 1.0) {
         didSet { setNeedsDisplay() }
     }
+    @IBInspectable open var attributedPlaceHolder: NSAttributedString? {
+        didSet { setNeedsDisplay() }
+    }
     @IBInspectable open var placeHolderLeftMargin: CGFloat = 5 {
         didSet { setNeedsDisplay() }
     }
@@ -124,25 +127,32 @@ open class GrowingTextView: UITextView {
     // Show placeholder
     override open func draw(_ rect: CGRect) {
         super.draw(rect)
+
         if text.isEmpty {
-            guard let placeHolder = placeHolder else { return }
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.alignment = textAlignment
-            
-            let rect = CGRect(x: textContainerInset.left + placeHolderLeftMargin,
-                              y: textContainerInset.top,
-                              width:   frame.size.width - textContainerInset.left - textContainerInset.right,
-                              height: frame.size.height)
-            
-            var attributes: [String: Any] = [
-                NSForegroundColorAttributeName: placeHolderColor,
-                NSParagraphStyleAttributeName: paragraphStyle
-            ]
-            if let font = font {
-                attributes[NSFontAttributeName] = font
+            let xValue = textContainerInset.left + placeHolderLeftMargin
+            let yValue = textContainerInset.top
+            let width = rect.size.width - xValue - textContainerInset.right
+            let height = rect.size.height - yValue - textContainerInset.bottom
+            let placeHolderRect = CGRect(x: xValue, y: yValue, width: width, height: height)
+
+            if let attributedPlaceholder = attributedPlaceHolder {
+                // Prefer to use attributedPlaceHolder
+                attributedPlaceholder.draw(in: placeHolderRect)
+            } else if let placeHolder = placeHolder {
+                // Otherwise user placeHolder and inherit `text` attributes
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.alignment = textAlignment
+
+                var attributes: [String: Any] = [
+                    NSForegroundColorAttributeName: placeHolderColor,
+                    NSParagraphStyleAttributeName: paragraphStyle
+                ]
+                if let font = font {
+                    attributes[NSFontAttributeName] = font
+                }
+
+                placeHolder.draw(in: rect, withAttributes: attributes)
             }
-            
-            placeHolder.draw(in: rect, withAttributes: attributes)
         }
     }
     
