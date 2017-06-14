@@ -21,6 +21,9 @@ open class GrowingTextView: UITextView {
     
     // Trim white space and newline characters when end editing. Default is true
     @IBInspectable open var trimWhiteSpaceWhenEndEditing: Bool = true
+
+    // Minimum height of the textview
+    @IBInspectable open var minHeight: CGFloat = CGFloat(0)
     
     // Maximm height of the textview
     @IBInspectable open var maxHeight: CGFloat = CGFloat(0)
@@ -95,8 +98,14 @@ open class GrowingTextView: UITextView {
         oldText = text
         oldWidth = bounds.width
         
-        let size = sizeThatFits(CGSize(width:bounds.size.width, height: CGFloat.greatestFiniteMagnitude))
-        let height = maxHeight > 0 ? min(size.height, maxHeight) : size.height
+        let size = sizeThatFits(CGSize(width: bounds.size.width, height: CGFloat.greatestFiniteMagnitude))
+        var height = size.height
+
+        // Constrain minimum height
+        height = minHeight > 0 ? max(height, minHeight) : height
+
+        // Constrain maximum height
+        height = maxHeight > 0 ? min(height, maxHeight) : height
         
         if (heightConstraint == nil) {
             heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: height)
