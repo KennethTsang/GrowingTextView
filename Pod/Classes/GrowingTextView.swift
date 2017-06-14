@@ -30,7 +30,7 @@ open class GrowingTextView: UITextView {
     
     // Placeholder properties
     // Need to set both placeHolder and placeHolderColor in order to show placeHolder in the textview
-    @IBInspectable open var placeHolder: NSString? {
+    @IBInspectable open var placeHolder: String? {
         didSet { setNeedsDisplay() }
     }
     @IBInspectable open var placeHolderColor: UIColor = UIColor(white: 0.8, alpha: 1.0) {
