@@ -143,11 +143,6 @@ open class GrowingTextView: UITextView {
                 let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.alignment = textAlignment
 
-                let rect = CGRect(x: textContainerInset.left + placeHolderLeftMargin,
-                                  y: textContainerInset.top,
-                                  width:   frame.size.width - textContainerInset.left - textContainerInset.right,
-                                  height: frame.size.height)
-
                 var attributes: [String: Any] = [
                     NSForegroundColorAttributeName: placeHolderColor,
                     NSParagraphStyleAttributeName: paragraphStyle
@@ -156,7 +151,7 @@ open class GrowingTextView: UITextView {
                     attributes[NSFontAttributeName] = font
                 }
 
-                placeHolder.draw(in: rect, withAttributes: attributes)
+                placeHolder.draw(in: placeHolderRect, withAttributes: attributes)
             }
         }
     }
