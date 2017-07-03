@@ -13,7 +13,7 @@ import UIKit
     @objc optional func textViewDidChangeHeight(_ textView: GrowingTextView, height: CGFloat)
 }
 
-@IBDesignable @objc
+@IBDesignable @objcMembers
 open class GrowingTextView: UITextView {
     
     // Maximum length of text. 0 means no limit.
@@ -49,7 +49,7 @@ open class GrowingTextView: UITextView {
         }
     }
 
-    fileprivate weak var heightConstraint: NSLayoutConstraint?
+    private weak var heightConstraint: NSLayoutConstraint?
     
     // Initialize
     override public init(frame: CGRect, textContainer: NSTextContainer?) {
@@ -79,7 +79,7 @@ open class GrowingTextView: UITextView {
     }
 
     // Listen to UITextView notification to handle trimming, placeholder and maximum length
-    fileprivate func commonInit() {
+    private func commonInit() {
         self.contentMode = .redraw
         associateConstraints()
         NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: NSNotification.Name.UITextViewTextDidChange, object: self)
@@ -143,12 +143,12 @@ open class GrowingTextView: UITextView {
                 let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.alignment = textAlignment
 
-                var attributes: [String: Any] = [
-                    NSForegroundColorAttributeName: placeHolderColor,
-                    NSParagraphStyleAttributeName: paragraphStyle
+                var attributes: [NSAttributedStringKey: Any] = [
+                    NSAttributedStringKey.foregroundColor: placeHolderColor,
+                    NSAttributedStringKey.paragraphStyle: paragraphStyle
                 ]
                 if let font = font {
-                    attributes[NSFontAttributeName] = font
+                    attributes[NSAttributedStringKey.font] = font
                 }
 
                 placeHolder.draw(in: placeHolderRect, withAttributes: attributes)

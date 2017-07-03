@@ -55,13 +55,13 @@ class Example1: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func keyboardWillChangeFrame(_ notification: Notification) {
+    @objc func keyboardWillChangeFrame(_ notification: Notification) {
         let endFrame = ((notification as NSNotification).userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         bottomConstraint.constant = view.bounds.height - endFrame.origin.y
         self.view.layoutIfNeeded()
     }
     
-    func tapGestureHandler() {
+    @objc func tapGestureHandler() {
         view.endEditing(true)
     }
 }
