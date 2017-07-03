@@ -172,7 +172,7 @@ open class GrowingTextView: UITextView {
     func textDidChange(notification: Notification) {
         if let notificationObject = notification.object as? GrowingTextView {
             if notificationObject === self {
-                if maxLength > 0 && text.characters.count > maxLength {
+                if maxLength > 0 && text.count > maxLength {
                     
                     let endIndex = text.index(text.startIndex, offsetBy: maxLength)
                     text = text.substring(to: endIndex)
