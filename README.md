@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Platform](https://img.shields.io/cocoapods/p/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Language](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
+[![Language](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 
 <img src="DEMO.gif" border=1 style="border-color:#eeeeee">
 
@@ -20,11 +21,15 @@ it, simply add the following line to your Podfile:
 
 Swift 3<br>
 ```ruby
-pod "GrowingTextView"
+pod 'GrowingTextView'
+```
+
+Swift 4 (Beta)<br>
+```ruby
+pod 'GrowingTextView', :git => 'https://github.com/KennethTsang/GrowingTextView.git', :branch => 'swift4'
 ```
 
 Swift 2.3 (Stopped update since Sep 2016)<br>
-
 ```ruby
 pod 'GrowingTextView', :git => 'https://github.com/KennethTsang/GrowingTextView.git', :branch => 'swift2'
 ```
@@ -63,16 +68,16 @@ override func viewDidLoad() {
 
 ## Customization
 
-| Parameter                      | Type    | Description                              | Default                         |
-| ------------------------------ | ------- | ---------------------------------------- | ------------------------------- |
-| *maxLength*                    | Int     | Maximum text length. Exceeded text will be trimmed. 0 means no limit. | *0*                             |
-| *trimWhiteSpaceWhenEndEditing* | Bool    | Trim white space and new line characters when textview did end editing. | *true*                          |
-| *placeHolder*                  | String? | PlaceHolder text.                        | *nil*                           |
-| *placeHolderColor*             | UIColor | PlaceHolder text color.                  | UIColor(white: 0.8, alpha: 1.0) |
-| *placeHolderLeftMargin*        | CGFloat | Left margin of PlaceHolder text.         | *5.0*                           |
-| *attributedPlaceHolder*        | NSAttributedString? | Attributed PlaceHolder text. | *nil*                           |
-| *minHeight*                    | CGFloat | Minimum height of textview.              | *0.0*                           |
-| *maxHeight*                    | CGFloat | Maximum height of textview.              | *0.0*                           |
+| Parameter                      | Type                | Description                              | Default                         |
+| ------------------------------ | ------------------- | ---------------------------------------- | ------------------------------- |
+| *maxLength*                    | Int                 | Maximum text length. Exceeded text will be trimmed. 0 means no limit. | *0*                             |
+| *trimWhiteSpaceWhenEndEditing* | Bool                | Trim white space and new line characters when textview did end editing. | *true*                          |
+| *placeHolder*                  | String?             | PlaceHolder text.                        | *nil*                           |
+| *placeHolderColor*             | UIColor             | PlaceHolder text color.                  | UIColor(white: 0.8, alpha: 1.0) |
+| *placeHolderLeftMargin*        | CGFloat             | Left margin of PlaceHolder text.         | *5.0*                           |
+| *attributedPlaceHolder*        | NSAttributedString? | Attributed PlaceHolder text.             | *nil*                           |
+| *minHeight*                    | CGFloat             | Minimum height of textview.              | *0.0*                           |
+| *maxHeight*                    | CGFloat             | Maximum height of textview.              | *0.0*                           |
 
 #### Examples
 
