@@ -186,7 +186,7 @@ open class GrowingTextView: UITextView {
                 if maxLength > 0 && text.count > maxLength {
                     
                     let endIndex = text.index(text.startIndex, offsetBy: maxLength)
-                    text = text.substring(to: endIndex)
+                    text = String(text[..<endIndex])
                     undoManager?.removeAllActions()
                 }
                 setNeedsDisplay()
