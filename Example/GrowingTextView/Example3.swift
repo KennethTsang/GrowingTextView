@@ -27,7 +27,7 @@ class Example3: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
-    func tapGestureHandler() {
+    @objc func tapGestureHandler() {
         view.endEditing(true)
     }
     
