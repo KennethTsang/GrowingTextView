@@ -125,7 +125,7 @@ open class GrowingTextView: UITextView {
             }
         }
     }
-
+    
     private func scrollToCorrectPosition() {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
             if self.isFirstResponder {
@@ -153,12 +153,12 @@ open class GrowingTextView: UITextView {
                 // Otherwise user placeHolder and inherit `text` attributes
                 let paragraphStyle = NSMutableParagraphStyle()
                 paragraphStyle.alignment = textAlignment
-                var attributes: [String: Any] = [
-                    NSForegroundColorAttributeName: placeHolderColor,
-                    NSParagraphStyleAttributeName: paragraphStyle
+                var attributes: [NSAttributedStringKey: Any] = [
+                    .foregroundColor: placeHolderColor,
+                    .paragraphStyle: paragraphStyle
                 ]
                 if let font = font {
-                    attributes[NSFontAttributeName] = font
+                    attributes[.font] = font
                 }
                 
                 placeHolder.draw(in: placeHolderRect, withAttributes: attributes)
@@ -167,7 +167,7 @@ open class GrowingTextView: UITextView {
     }
     
     // Trim white space and new line characters when end editing.
-    func textDidEndEditing(notification: Notification) {
+    @objc func textDidEndEditing(notification: Notification) {
         if let notificationObject = notification.object as? GrowingTextView {
             if notificationObject === self {
                 if trimWhiteSpaceWhenEndEditing {
@@ -180,13 +180,13 @@ open class GrowingTextView: UITextView {
     }
     
     // Limit the length of text
-    func textDidChange(notification: Notification) {
+    @objc func textDidChange(notification: Notification) {
         if let notificationObject = notification.object as? GrowingTextView {
             if notificationObject === self {
-                if maxLength > 0 && text.characters.count > maxLength {
+                if maxLength > 0 && text.count > maxLength {
                     
                     let endIndex = text.index(text.startIndex, offsetBy: maxLength)
-                    text = text.substring(to: endIndex)
+                    text = String(text[..<endIndex])
                     undoManager?.removeAllActions()
                 }
                 setNeedsDisplay()
@@ -194,3 +194,4 @@ open class GrowingTextView: UITextView {
         }
     }
 }
+
