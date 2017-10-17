@@ -19,9 +19,15 @@ iOS 8.0 or above
 GrowingTextView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-Swift 3 and Swift 4<br>
+Swift 4<br>
+
 ```ruby
-pod 'GrowingTextView'
+pod 'GrowingTextView', '~> 0.5.0'
+```
+
+Swift 3<br>
+```ruby
+pod 'GrowingTextView', '~> 0.4.0'
 ```
 
 Swift 2.3 (Stopped update since Sep 2016)<br>
