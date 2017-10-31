@@ -94,6 +94,7 @@ open class GrowingTextView: UITextView {
         layoutIfNeeded()
     }
     
+    private var isGrowing = false
     override open func layoutSubviews() {
         super.layoutSubviews()
         
@@ -117,7 +118,9 @@ open class GrowingTextView: UITextView {
         }
         
         // Update height constraint if needed
-        if height != heightConstraint?.constant {
+        let originHeight = heightConstraint?.constant ?? 0
+        if height != originHeight {
+            if height > originHeight { isGrowing = true }
             heightConstraint!.constant = height
             scrollToCorrectPosition()
             if let delegate = delegate as? GrowingTextViewDelegate {
@@ -127,12 +130,15 @@ open class GrowingTextView: UITextView {
     }
     
     private func scrollToCorrectPosition() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
-            if self.isFirstResponder {
-                self.scrollRangeToVisible(NSMakeRange(-1, 0)) // Scroll to bottom
-            } else {
-                self.scrollRangeToVisible(NSMakeRange(0, 0)) // Scroll to top
+        if self.isFirstResponder {
+            if self.isGrowing {
+                // Workaround to for incorrect scroll position on Swift4
+                self.heightConstraint!.constant += 0.0000001
+                self.isGrowing = false
             }
+            self.scrollRangeToVisible(NSMakeRange(-1, 0)) // Scroll to bottom
+        } else {
+            self.scrollRangeToVisible(NSMakeRange(0, 0)) // Scroll to top
         }
     }
     
