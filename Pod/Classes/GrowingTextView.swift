@@ -135,8 +135,9 @@ open class GrowingTextView: UITextView {
                 // Workaround to for incorrect scroll position on Swift4
                 self.heightConstraint!.constant += 0.0000001
                 self.isGrowing = false
+            } else {
+                self.scrollRangeToVisible(NSMakeRange(-1, 0)) // Scroll to bottom
             }
-            self.scrollRangeToVisible(NSMakeRange(-1, 0)) // Scroll to bottom
         } else {
             self.scrollRangeToVisible(NSMakeRange(0, 0)) // Scroll to top
         }
