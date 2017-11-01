@@ -72,7 +72,7 @@ open class GrowingTextView: UITextView {
         return CGSize(width: UIViewNoIntrinsicMetric, height: 30)
     }
     
-    func associateConstraints() {
+    private func associateConstraints() {
         // iterate through all text view's constraints and identify
         // height,from: https://github.com/legranddamien/MBAutoGrowingTextView
         for constraint in constraints {
@@ -94,7 +94,7 @@ open class GrowingTextView: UITextView {
         layoutIfNeeded()
     }
     
-    private var isGrowing = false
+    private var shouldScrollAfterHeightChanged = false
     override open func layoutSubviews() {
         super.layoutSubviews()
         
@@ -118,26 +118,21 @@ open class GrowingTextView: UITextView {
         }
         
         // Update height constraint if needed
-        let originHeight = heightConstraint?.constant ?? 0
-        if height != originHeight {
-            if height > originHeight { isGrowing = true }
+        if height != heightConstraint!.constant {
+            shouldScrollAfterHeightChanged = true
             heightConstraint!.constant = height
-            scrollToCorrectPosition()
             if let delegate = delegate as? GrowingTextViewDelegate {
                 delegate.textViewDidChangeHeight?(self, height: height)
             }
+        } else if shouldScrollAfterHeightChanged {
+            shouldScrollAfterHeightChanged = false
+            scrollToCorrectPosition()
         }
     }
     
     private func scrollToCorrectPosition() {
         if self.isFirstResponder {
-            if self.isGrowing {
-                // Workaround to for incorrect scroll position on Swift4
-                self.heightConstraint!.constant += 0.0000001
-                self.isGrowing = false
-            } else {
-                self.scrollRangeToVisible(NSMakeRange(-1, 0)) // Scroll to bottom
-            }
+            self.scrollRangeToVisible(NSMakeRange(-1, 0)) // Scroll to bottom
         } else {
             self.scrollRangeToVisible(NSMakeRange(0, 0)) // Scroll to top
         }
@@ -188,16 +183,13 @@ open class GrowingTextView: UITextView {
     
     // Limit the length of text
     @objc func textDidChange(notification: Notification) {
-        if let notificationObject = notification.object as? GrowingTextView {
-            if notificationObject === self {
-                if maxLength > 0 && text.count > maxLength {
-                    
-                    let endIndex = text.index(text.startIndex, offsetBy: maxLength)
-                    text = String(text[..<endIndex])
-                    undoManager?.removeAllActions()
-                }
-                setNeedsDisplay()
+        if let sender = notification.object as? GrowingTextView, sender == self {
+            if maxLength > 0 && text.count > maxLength {
+                let endIndex = text.index(text.startIndex, offsetBy: maxLength)
+                text = String(text[..<endIndex])
+                undoManager?.removeAllActions()
             }
+            setNeedsDisplay()
         }
     }
 }
