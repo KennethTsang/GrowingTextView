@@ -10,15 +10,22 @@ import UIKit
 import GrowingTextView
 
 class Example1: UIViewController {
-
-    @IBOutlet weak var inputToolbar: UIToolbar!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint! //*** Bottom Constraint of toolbar ***
+    private var inputToolbar: UIView!
+    private var textView: GrowingTextView!
+    private var textViewBottomConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        // *** Create Toolbar
+        inputToolbar = UIView()
+        inputToolbar.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
+        inputToolbar.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(inputToolbar)
         
-        // *** Create GrowingTextView Instance ***
-        let textView = GrowingTextView()
+        // *** Create GrowingTextView ***
+        textView = GrowingTextView()
         textView.delegate = self
         textView.layer.cornerRadius = 4.0
         textView.maxLength = 200
@@ -26,26 +33,37 @@ class Example1: UIViewController {
         textView.trimWhiteSpaceWhenEndEditing = true
         textView.placeHolder = "Say something..."
         textView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
-        textView.placeHolderLeftMargin = 5.0
         textView.font = UIFont.systemFont(ofSize: 15)
-        
-        // *** Add GrowingTextView into Toolbar
-        inputToolbar.addSubview(textView)
-        
-        // *** Set Autolayout constraints ***
         textView.translatesAutoresizingMaskIntoConstraints = false
-        inputToolbar.translatesAutoresizingMaskIntoConstraints = false
-        
-        let views = ["textView": textView]
-        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[textView]-8-|", options: [], metrics: nil, views: views)
-        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[textView]-8-|", options: [], metrics: nil, views: views)
-        inputToolbar.addConstraints(hConstraints)
-        inputToolbar.addConstraints(vConstraints)
-        self.view.layoutIfNeeded()
+        inputToolbar.addSubview(textView)
 
-        // *** Listen for keyboard show / hide ***
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        // *** Autolayout ***
+        NSLayoutConstraint.activate([
+            inputToolbar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            inputToolbar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            inputToolbar.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            textView.topAnchor.constraint(equalTo: inputToolbar.topAnchor, constant: 8)
+        ])
+
+        if #available(iOS 11, *) {
+            textViewBottomConstraint = textView.bottomAnchor.constraint(equalTo: inputToolbar.safeAreaLayoutGuide.bottomAnchor, constant: -8)
+            NSLayoutConstraint.activate([
+                textView.leadingAnchor.constraint(equalTo: inputToolbar.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+                textView.trailingAnchor.constraint(equalTo: inputToolbar.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+                textViewBottomConstraint
+                ])
+        } else {
+            textViewBottomConstraint = textView.bottomAnchor.constraint(equalTo: inputToolbar.bottomAnchor, constant: -8)
+            NSLayoutConstraint.activate([
+                textView.leadingAnchor.constraint(equalTo: inputToolbar.leadingAnchor, constant: 8),
+                textView.trailingAnchor.constraint(equalTo: inputToolbar.trailingAnchor, constant: -8),
+                textViewBottomConstraint
+                ])
+        }
         
+        // *** Listen to keyboard show / hide ***
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+
         // *** Hide keyboard when tapping outside ***
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         view.addGestureRecognizer(tapGesture)
@@ -55,13 +73,20 @@ class Example1: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc func keyboardWillChangeFrame(_ notification: Notification) {
-        let endFrame = ((notification as NSNotification).userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        bottomConstraint.constant = view.bounds.height - endFrame.origin.y
-        self.view.layoutIfNeeded()
+    @objc private func keyboardWillChangeFrame(_ notification: Notification) {
+        if let endFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            var keyboardHeight = view.bounds.height - endFrame.origin.y
+            if #available(iOS 11, *) {
+                if keyboardHeight > 0 {
+                    keyboardHeight = keyboardHeight - view.safeAreaInsets.bottom
+                }
+            }
+            textViewBottomConstraint.constant = -keyboardHeight - 8
+            view.layoutIfNeeded()
+        }
     }
     
-    @objc func tapGestureHandler() {
+    @objc private func tapGestureHandler() {
         view.endEditing(true)
     }
 }

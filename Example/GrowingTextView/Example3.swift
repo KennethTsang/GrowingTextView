@@ -15,13 +15,14 @@ class Example3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // *** Customize GrowingTextView Instance ***
+
+        // *** Customize GrowingTextView ***
+        textView.layer.cornerRadius = 4.0
         textView.placeHolder = "Say something..."
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.minHeight = 30
         textView.maxHeight = 100
-        
+
         // *** Hide keyboard when tapping outside ***
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         view.addGestureRecognizer(tapGesture)

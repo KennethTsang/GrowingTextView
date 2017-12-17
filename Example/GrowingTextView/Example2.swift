@@ -12,24 +12,16 @@ import GrowingTextView
 class Example2: UIViewController {
     
     @IBOutlet weak var inputToolbar: UIView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint! //*** Bottom Constraint of toolbar ***
     @IBOutlet weak var textView: GrowingTextView!
-    
+    @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // *** Set below parameters in Storyboard ***
-        //        textView.delegate = self
-        //        textView.layer.cornerRadius = 4.0
-        //        textView.maxLength = 200
-        //        textView.maxHeight = 70
-        //        textView.trimWhiteSpaceWhenEndEditing = true
-        //        textView.placeHolder = "Say something..."
-        //        textView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
-        //        textView.placeHolderLeftMargin = 5.0
-        //        textView.font = UIFont.systemFont(ofSize: 15)
-        
-        // *** Listen for keyboard show / hide ***
+
+        // *** Customize GrowingTextView ***
+        textView.layer.cornerRadius = 4.0
+
+        // *** Listen to keyboard show / hide ***
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
 
         // *** Hide keyboard when tapping outside ***
@@ -41,12 +33,19 @@ class Example2: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc func keyboardWillChangeFrame(_ notification: Notification) {
-        let endFrame = ((notification as NSNotification).userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        bottomConstraint.constant = UIScreen.main.bounds.height - endFrame.origin.y
-        self.view.layoutIfNeeded()
+    @objc private func keyboardWillChangeFrame(_ notification: Notification) {
+        if let endFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            var keyboardHeight = view.bounds.height - endFrame.origin.y
+            if #available(iOS 11, *) {
+                if keyboardHeight > 0 {
+                    keyboardHeight = keyboardHeight - view.safeAreaInsets.bottom
+                }
+            }
+            textViewBottomConstraint.constant = keyboardHeight + 8
+            view.layoutIfNeeded()
+        }
     }
-    
+
     @objc func tapGestureHandler() {
         view.endEditing(true)
     }

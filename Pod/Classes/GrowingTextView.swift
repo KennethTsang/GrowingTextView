@@ -42,9 +42,6 @@ open class GrowingTextView: UITextView {
     @IBInspectable open var attributedPlaceHolder: NSAttributedString? {
         didSet { setNeedsDisplay() }
     }
-    @IBInspectable open var placeHolderLeftMargin: CGFloat = 5 {
-        didSet { setNeedsDisplay() }
-    }
     
     // Initialize
     override public init(frame: CGRect, textContainer: NSTextContainer?) {
@@ -141,8 +138,9 @@ open class GrowingTextView: UITextView {
     // Show placeholder if needed
     override open func draw(_ rect: CGRect) {
         super.draw(rect)
+        
         if text.isEmpty {
-            let xValue = textContainerInset.left + placeHolderLeftMargin
+            let xValue = textContainerInset.left + textContainer.lineFragmentPadding
             let yValue = textContainerInset.top
             let width = rect.size.width - xValue - textContainerInset.right
             let height = rect.size.height - yValue - textContainerInset.bottom
