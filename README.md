@@ -22,7 +22,7 @@ it, simply add the following line to your Podfile:
 Swift 4<br>
 
 ```ruby
-pod 'GrowingTextView', '~> 0.5.3'
+pod 'GrowingTextView', '~> 0.5.4'
 ```
 
 Swift 3<br>
@@ -75,7 +75,6 @@ override func viewDidLoad() {
 | *trimWhiteSpaceWhenEndEditing* | Bool                | Trim white space and new line characters when textview did end editing. | *true*                          |
 | *placeHolder*                  | String?             | PlaceHolder text.                        | *nil*                           |
 | *placeHolderColor*             | UIColor             | PlaceHolder text color.                  | UIColor(white: 0.8, alpha: 1.0) |
-| *placeHolderLeftMargin*        | CGFloat             | Left margin of PlaceHolder text.         | *5.0*                           |
 | *attributedPlaceHolder*        | NSAttributedString? | Attributed PlaceHolder text.             | *nil*                           |
 | *minHeight*                    | CGFloat             | Minimum height of textview.              | *0.0*                           |
 | *maxHeight*                    | CGFloat             | Maximum height of textview.              | *0.0*                           |
