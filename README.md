@@ -41,7 +41,11 @@ Copy `GrowingTextView.swift` into your project.
 
 ## Usage
 
-**Programmatically**<br>
+**Example**<br>
+
+GrowingTextview is just a textview, download the example to see how to use it as a input toolbar like other instant messaging apps.
+
+**Using GrowingTextview programmatically**<br>
 
 ```swift
 let textView = GrowingTextView()
@@ -49,7 +53,7 @@ textView.delegate = self
 addSubview(textView)
 ```
 
-**Storyboard**<br>
+**Using GrowingTextview in Storyboard**<br>
 
 1. Drag a TextView into Storyboard.
 2. Set class to "GrowingTextView".
