@@ -77,9 +77,9 @@ override func viewDidLoad() {
 | ------------------------------ | ------------------- | ---------------------------------------- | ------------------------------- |
 | *maxLength*                    | Int                 | Maximum text length. Exceeded text will be trimmed. 0 means no limit. | *0*                             |
 | *trimWhiteSpaceWhenEndEditing* | Bool                | Trim white space and new line characters when textview did end editing. | *true*                          |
-| *placeholder*                  | String?             | PlaceHolder text.                        | *nil*                           |
-| *placeholderColor*             | UIColor             | PlaceHolder text color.                  | UIColor(white: 0.8, alpha: 1.0) |
-| *attributedPlaceHolder*        | NSAttributedString? | Attributed PlaceHolder text.             | *nil*                           |
+| *placeholder*                  | String?             | Placeholder text.                        | *nil*                           |
+| *placeholderColor*             | UIColor             | Placeholder text color.                  | UIColor(white: 0.8, alpha: 1.0) |
+| *attributedPlaceholder*        | NSAttributedString? | Attributed Placeholder text.             | *nil*                           |
 | *minHeight*                    | CGFloat             | Minimum height of textview.              | *0.0*                           |
 | *maxHeight*                    | CGFloat             | Maximum height of textview.              | *0.0*                           |
 
