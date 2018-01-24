@@ -39,7 +39,7 @@ open class GrowingTextView: UITextView {
     @IBInspectable open var placeholderColor: UIColor = UIColor(white: 0.8, alpha: 1.0) {
         didSet { setNeedsDisplay() }
     }
-    @IBInspectable open var attributedPlaceHolder: NSAttributedString? {
+    @IBInspectable open var attributedPlaceholder: NSAttributedString? {
         didSet { setNeedsDisplay() }
     }
     
@@ -146,8 +146,8 @@ open class GrowingTextView: UITextView {
             let height = rect.size.height - yValue - textContainerInset.bottom
             let placeholderRect = CGRect(x: xValue, y: yValue, width: width, height: height)
             
-            if let attributedPlaceholder = attributedPlaceHolder {
-                // Prefer to use attributedPlaceHolder
+            if let attributedPlaceholder = attributedPlaceholder {
+                // Prefer to use attributedPlaceholder
                 attributedPlaceholder.draw(in: placeholderRect)
             } else if let placeholder = placeholder {
                 // Otherwise user placeholder and inherit `text` attributes
