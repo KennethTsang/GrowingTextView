@@ -139,7 +139,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
                                                 <real key="value" value="70"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Say something..."/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Say something..."/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="MoA-Hl-V8R" id="oZX-Qv-oXj"/>
@@ -222,7 +222,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Say something..."/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Say something..."/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                         <integer key="value" value="200"/>
                                     </userDefinedRuntimeAttribute>

@@ -77,8 +77,8 @@ override func viewDidLoad() {
 | ------------------------------ | ------------------- | ---------------------------------------- | ------------------------------- |
 | *maxLength*                    | Int                 | Maximum text length. Exceeded text will be trimmed. 0 means no limit. | *0*                             |
 | *trimWhiteSpaceWhenEndEditing* | Bool                | Trim white space and new line characters when textview did end editing. | *true*                          |
-| *placeHolder*                  | String?             | PlaceHolder text.                        | *nil*                           |
-| *placeHolderColor*             | UIColor             | PlaceHolder text color.                  | UIColor(white: 0.8, alpha: 1.0) |
+| *placeholder*                  | String?             | PlaceHolder text.                        | *nil*                           |
+| *placeholderColor*             | UIColor             | PlaceHolder text color.                  | UIColor(white: 0.8, alpha: 1.0) |
 | *attributedPlaceHolder*        | NSAttributedString? | Attributed PlaceHolder text.             | *nil*                           |
 | *minHeight*                    | CGFloat             | Minimum height of textview.              | *0.0*                           |
 | *maxHeight*                    | CGFloat             | Maximum height of textview.              | *0.0*                           |
@@ -88,8 +88,8 @@ override func viewDidLoad() {
 ```swift
 textView.maxLength = 140
 textView.trimWhiteSpaceWhenEndEditing = false
-textView.placeHolder = "Say something..."
-textView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
+textView.placeholder = "Say something..."
+textView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
 textView.minHeight = 25.0
 textView.maxHeight = 70.0
 textView.backgroundColor = UIColor.whiteColor()
