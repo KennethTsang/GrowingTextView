@@ -31,8 +31,8 @@ class Example1: UIViewController {
         textView.maxLength = 200
         textView.maxHeight = 70
         textView.trimWhiteSpaceWhenEndEditing = true
-        textView.placeHolder = "Say something..."
-        textView.placeHolderColor = UIColor(white: 0.8, alpha: 1.0)
+        textView.placeholder = "Say something..."
+        textView.placeholderColor = UIColor(white: 0.8, alpha: 1.0)
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.translatesAutoresizingMaskIntoConstraints = false
         inputToolbar.addSubview(textView)

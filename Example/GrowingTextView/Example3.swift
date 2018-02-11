@@ -18,7 +18,7 @@ class Example3: UIViewController {
 
         // *** Customize GrowingTextView ***
         textView.layer.cornerRadius = 4.0
-        textView.placeHolder = "Say something..."
+        textView.placeholder = "Say something..."
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.minHeight = 30
         textView.maxHeight = 100
