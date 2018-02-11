@@ -22,7 +22,7 @@ it, simply add the following line to your Podfile:
 Swift 4<br>
 
 ```ruby
-pod 'GrowingTextView', '~> 0.5.4'
+pod 'GrowingTextView', '~> 0.5.5'
 ```
 
 Swift 3<br>
