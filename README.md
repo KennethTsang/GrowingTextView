@@ -35,6 +35,28 @@ Swift 2.3 (Stopped update since Sep 2016)<br>
 pod 'GrowingTextView', :git => 'https://github.com/KennethTsang/GrowingTextView.git', :branch => 'swift2'
 ```
 
+#### Carthage
+
+GrowingTextView is also available through
+[Carthage](https://github.com/Carthage/Carthage). To install it, add the following
+line to your Cartfile:
+
+Swift 4<br>
+
+```ruby
+github "KennethTsang/GrowingTextView" ~> 0.5.5
+```
+
+Swift 3<br>
+```ruby
+github "KennethTsang/GrowingTextView" ~> 0.4.0
+```
+
+Swift 2.3 (Stopped update since Sep 2016)<br>
+```ruby
+github "KennethTsang/GrowingTextView" "swift2"
+```
+
 #### Manually
 
 Copy `GrowingTextView.swift` into your project.
