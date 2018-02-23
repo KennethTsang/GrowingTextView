@@ -44,7 +44,7 @@ line to your Cartfile:
 Swift 4<br>
 
 ```ruby
-github "KennethTsang/GrowingTextView" ~> 0.5.4
+github "KennethTsang/GrowingTextView" ~> 0.5.5
 ```
 
 Swift 3<br>
