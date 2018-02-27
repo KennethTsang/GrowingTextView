@@ -58,7 +58,6 @@ open class GrowingTextView: UITextView {
         contentMode = .redraw
         associateConstraints()
         NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: .UITextViewTextDidChange, object: self)
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidEndEditing), name: .UITextViewTextDidEndEditing, object: self)
     }
     
     deinit {
@@ -118,12 +117,12 @@ open class GrowingTextView: UITextView {
         if height != heightConstraint!.constant {
             shouldScrollAfterHeightChanged = true
             heightConstraint!.constant = height
-            if let delegate = delegate as? GrowingTextViewDelegate {
-                delegate.textViewDidChangeHeight?(self, height: height)
-            }
         } else if shouldScrollAfterHeightChanged {
             shouldScrollAfterHeightChanged = false
             scrollToCorrectPosition()
+        }
+        if let delegate = delegate as? GrowingTextViewDelegate {
+            delegate.textViewDidChangeHeight?(self, height: height)
         }
     }
     
@@ -166,27 +165,9 @@ open class GrowingTextView: UITextView {
         }
     }
     
-    // Trim white space and new line characters when end editing.
-    @objc func textDidEndEditing(notification: Notification) {
-        if let notificationObject = notification.object as? GrowingTextView {
-            if notificationObject === self {
-                if trimWhiteSpaceWhenEndEditing {
-                    text = text?.trimmingCharacters(in: .whitespacesAndNewlines)
-                    setNeedsDisplay()
-                }
-            }
-            scrollToCorrectPosition()
-        }
-    }
-    
     // Limit the length of text
     @objc func textDidChange(notification: Notification) {
         if let sender = notification.object as? GrowingTextView, sender == self {
-            if maxLength > 0 && text.count > maxLength {
-                let endIndex = text.index(text.startIndex, offsetBy: maxLength)
-                text = String(text[..<endIndex])
-                undoManager?.removeAllActions()
-            }
             setNeedsDisplay()
         }
     }
