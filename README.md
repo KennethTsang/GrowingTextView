@@ -22,12 +22,12 @@ it, simply add the following line to your Podfile:
 Swift 4<br>
 
 ```ruby
-pod 'GrowingTextView', '~> 0.5.5'
+pod 'GrowingTextView', '~> 0.5'
 ```
 
 Swift 3<br>
 ```ruby
-pod 'GrowingTextView', '~> 0.4.0'
+pod 'GrowingTextView', '~> 0.4'
 ```
 
 Swift 2.3 (Stopped update since Sep 2016)<br>
@@ -44,12 +44,12 @@ line to your Cartfile:
 Swift 4<br>
 
 ```ruby
-github "KennethTsang/GrowingTextView" ~> 0.5.5
+github "KennethTsang/GrowingTextView" ~> 0.5
 ```
 
 Swift 3<br>
 ```ruby
-github "KennethTsang/GrowingTextView" ~> 0.4.0
+github "KennethTsang/GrowingTextView" ~> 0.4
 ```
 
 Swift 2.3 (Stopped update since Sep 2016)<br>
