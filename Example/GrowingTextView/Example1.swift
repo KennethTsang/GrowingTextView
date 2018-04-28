@@ -75,7 +75,7 @@ class Example1: UIViewController {
     
     @objc private func keyboardWillChangeFrame(_ notification: Notification) {
         if let endFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            var keyboardHeight = view.bounds.height - endFrame.origin.y
+            var keyboardHeight = UIScreen.main.bounds.height - endFrame.origin.y
             if #available(iOS 11, *) {
                 if keyboardHeight > 0 {
                     keyboardHeight = keyboardHeight - view.safeAreaInsets.bottom
