@@ -38,11 +38,13 @@ class Example1: UIViewController {
         inputToolbar.addSubview(textView)
 
         // *** Autolayout ***
+        let topConstraint = textView.topAnchor.constraint(equalTo: inputToolbar.topAnchor, constant: 8)
+        topConstraint.priority = UILayoutPriority(999)
         NSLayoutConstraint.activate([
             inputToolbar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             inputToolbar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             inputToolbar.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            textView.topAnchor.constraint(equalTo: inputToolbar.topAnchor, constant: 8)
+            topConstraint
         ])
 
         if #available(iOS 11, *) {
@@ -62,7 +64,7 @@ class Example1: UIViewController {
         }
         
         // *** Listen to keyboard show / hide ***
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
 
         // *** Hide keyboard when tapping outside ***
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
@@ -74,7 +76,7 @@ class Example1: UIViewController {
     }
     
     @objc private func keyboardWillChangeFrame(_ notification: Notification) {
-        if let endFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+        if let endFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             var keyboardHeight = UIScreen.main.bounds.height - endFrame.origin.y
             if #available(iOS 11, *) {
                 if keyboardHeight > 0 {

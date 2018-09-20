@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fnq-Oa-kwt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fnq-Oa-kwt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -124,10 +124,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6k-Bt-gaF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6k-Bt-gaF">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cJC-8p-dX3" customClass="GrowingTextView" customModule="GrowingTextView">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cJC-8p-dX3" customClass="GrowingTextView" customModule="GrowingTextView">
                                         <rect key="frame" x="8" y="8" width="359" height="33"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -148,7 +148,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="cJC-8p-dX3" firstAttribute="top" secondItem="r6k-Bt-gaF" secondAttribute="top" constant="8" id="8cx-hM-mDY"/>
+                                    <constraint firstItem="cJC-8p-dX3" firstAttribute="top" secondItem="r6k-Bt-gaF" secondAttribute="top" priority="999" constant="8" id="8cx-hM-mDY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -216,7 +216,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-fe-F8s" customClass="GrowingTextView" customModule="GrowingTextView">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-fe-F8s" customClass="GrowingTextView" customModule="GrowingTextView">
                                 <rect key="frame" x="8" y="144" width="359" height="33"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -260,7 +260,7 @@
                             <constraint firstItem="Y42-Ey-vw7" firstAttribute="leading" secondItem="MlD-Ep-TLw" secondAttribute="leading" constant="8" id="BwL-bC-XtC"/>
                             <constraint firstItem="MlD-Ep-TLw" firstAttribute="trailing" secondItem="Y42-Ey-vw7" secondAttribute="trailing" constant="8" id="KO9-tt-sh4"/>
                             <constraint firstItem="Y42-Ey-vw7" firstAttribute="top" secondItem="MlD-Ep-TLw" secondAttribute="top" constant="8" id="Wgh-YA-x0t"/>
-                            <constraint firstItem="KoN-fe-F8s" firstAttribute="top" secondItem="bD7-AD-2Jb" secondAttribute="bottom" constant="8" id="ftY-9Y-9jj"/>
+                            <constraint firstItem="KoN-fe-F8s" firstAttribute="top" secondItem="bD7-AD-2Jb" secondAttribute="bottom" priority="999" constant="8" id="ftY-9Y-9jj"/>
                             <constraint firstItem="bD7-AD-2Jb" firstAttribute="top" secondItem="Y42-Ey-vw7" secondAttribute="bottom" constant="8" id="lJV-gI-mej"/>
                             <constraint firstItem="MlD-Ep-TLw" firstAttribute="trailing" secondItem="bD7-AD-2Jb" secondAttribute="trailing" constant="8" id="xx1-Ba-dxI"/>
                         </constraints>
