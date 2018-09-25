@@ -5,6 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Language](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Language](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
+[![Language](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 
 <img src="DEMO.gif" border=1 style="border-color:#eeeeee">
 
@@ -22,7 +23,7 @@ it, simply add the following line to your Podfile:
 Swift 4.2<br>
 
 ```ruby
-pod 'GrowingTextView', '~> 0.6'
+pod 'GrowingTextView', '0.6.1'
 ```
 
 Swift 4.1<br>

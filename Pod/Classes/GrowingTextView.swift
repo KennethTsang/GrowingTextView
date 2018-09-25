@@ -18,7 +18,7 @@ open class GrowingTextView: UITextView {
     override open var text: String! {
         didSet { setNeedsDisplay() }
     }
-    private weak var heightConstraint: NSLayoutConstraint?
+    private var heightConstraint: NSLayoutConstraint?
     
     // Maximum length of text. 0 means no limit.
     @IBInspectable open var maxLength: Int = 0
