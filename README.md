@@ -6,6 +6,7 @@
 [![Language](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Language](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Language](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
+[![Language](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 
 <img src="DEMO.gif" border=1 style="border-color:#eeeeee">
 
@@ -19,6 +20,12 @@ iOS 8.0 or above
 
 GrowingTextView is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
+
+Swift 5.0<br>
+
+```ruby
+pod 'GrowingTextView', '0.7.0'
+```
 
 Swift 4.2<br>
 
@@ -47,6 +54,12 @@ pod 'GrowingTextView', :git => 'https://github.com/KennethTsang/GrowingTextView.
 GrowingTextView is also available through
 [Carthage](https://github.com/Carthage/Carthage). To install it, add the following
 line to your Cartfile:
+
+Swift 5.0<br>
+
+```ruby
+github "KennethTsang/GrowingTextView" ~> 0.7
+```
 
 Swift 4.2<br>
 
