@@ -24,7 +24,7 @@ it, simply add the following line to your Podfile:
 Swift 5.0<br>
 
 ```ruby
-pod 'GrowingTextView', '0.7.1'
+pod 'GrowingTextView', '0.7.2'
 ```
 
 Swift 4.2<br>
