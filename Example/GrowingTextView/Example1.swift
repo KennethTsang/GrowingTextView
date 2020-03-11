@@ -20,7 +20,7 @@ class Example1: UIViewController {
 
         // *** Create Toolbar
         inputToolbar = UIView()
-        inputToolbar.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
+        inputToolbar.backgroundColor = .systemGray
         inputToolbar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(inputToolbar)
         
