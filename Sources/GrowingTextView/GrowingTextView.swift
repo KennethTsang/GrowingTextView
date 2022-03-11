@@ -83,6 +83,15 @@ open class GrowingTextView: UITextView {
     private var oldText: String = ""
     private var oldSize: CGSize = .zero
     
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+            oldSize = .zero
+            setNeedsLayout()
+        }
+    }
+    
     private func forceLayoutSubviews() {
         oldSize = .zero
         setNeedsLayout()
