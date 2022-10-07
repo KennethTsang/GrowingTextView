@@ -187,4 +187,19 @@ open class GrowingTextView: UITextView {
             setNeedsDisplay()
         }
     }
+    
+    var lastPos : UITextPosition?
+       open override func paste(_ sender: Any?) {
+           lastPos = self.selectedTextRange?.start
+           super.paste(sender)
+           DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [unowned self] in
+               if self.text.count == self.maxLength {
+                   var currentPos = self.selectedTextRange?.start
+                   if lastPos == currentPos, let newPos = self.position(from: self.endOfDocument, offset: 0) {
+                       self.selectedTextRange = self.textRange(from: newPos, to: newPos)
+                   }
+               }
+           }
+       }
+    
 }
