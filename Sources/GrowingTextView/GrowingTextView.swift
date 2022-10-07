@@ -90,6 +90,7 @@ open class GrowingTextView: UITextView {
     }
     
     private var shouldScrollAfterHeightChanged = false
+    private var lastPos : UITextPosition?
     
     override open func layoutSubviews() {
         super.layoutSubviews()
@@ -185,6 +186,19 @@ open class GrowingTextView: UITextView {
                 undoManager?.removeAllActions()
             }
             setNeedsDisplay()
+        }
+    }
+    
+    open override func paste(_ sender: Any?) {
+        lastPos = self.selectedTextRange?.start
+        super.paste(sender)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in
+            if self?.text.count == self?.maxLength {
+                let currentPos = self?.selectedTextRange?.start
+                if self?.lastPos == currentPos,let endOfDocument = self?.endOfDocument, let newPos = self?.position(from: endOfDocument, offset: 0) {
+                    self?.selectedTextRange = self?.textRange(from: newPos, to: newPos)
+                }
+            }
         }
     }
 }
